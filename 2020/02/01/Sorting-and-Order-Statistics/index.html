@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2020 | Hexo</title>
+  <title>Sorting and Order Statistics | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/2020/index.html">
+  <meta name="description" content="Sorting AlgorithmsDefinition of sorting Problems​    A sorting problem is defined as followed: ​    Input: A sequence of n numbers : &lt;$a_1, a_2, \dots ,a_n$&gt;. ​    Output: A permutation &lt;$a_1">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Sorting and Order Statistics">
+<meta property="og:url" content="http://yoursite.com/2020/02/01/Sorting-and-Order-Statistics/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Sorting AlgorithmsDefinition of sorting Problems​    A sorting problem is defined as followed: ​    Input: A sequence of n numbers : &lt;$a_1, a_2, \dots ,a_n$&gt;. ​    Output: A permutation &lt;$a_1">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-02-01T09:10:42.775Z">
+<meta property="article:modified_time" content="2020-02-01T10:43:22.390Z">
 <meta property="article:author" content="Allen Yolk">
+<meta property="article:tag" content="迷惑行为">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -151,35 +156,63 @@
           </div>
           <div id="js-content" class="content-ll">
             
+<article id="post-Sorting-and-Order-Statistics" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      Sorting and Order Statistics
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/02/01/Sorting-and-Order-Statistics/" class="archive-article-date">
+
+        
+        <a href="/2020/02/01/Sorting-and-Order-Statistics/" class="archive-article-date">
   	<time datetime="2020-02-01T09:10:42.775Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-01</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/01/Sorting-and-Order-Statistics/">Sorting and Order Statistics</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Sorting-Algorithms"><a href="#Sorting-Algorithms" class="headerlink" title="Sorting Algorithms"></a>Sorting Algorithms</h2><h3 id="Definition-of-sorting-Problems"><a href="#Definition-of-sorting-Problems" class="headerlink" title="Definition of sorting Problems"></a>Definition of sorting Problems</h3><p>​    A <strong>sorting problem</strong> is defined as followed:</p>
+<p>​    <strong>Input:</strong> A sequence of n numbers : &lt;$a_1, a_2, \dots ,a_n$&gt;.</p>
+<p>​    <strong>Output:</strong> A permutation &lt;$a_1’,a_2’,\dots,a_n’$&gt; of the input sequence such that $a_1’\le a_2’\le \dots \le a_n’$</p>
+<p>​    The numbers that we are going to sort are also called <strong>keys</strong>.</p>
+<a id="more"></a>
 
-        <div class="article-info info-on-right">
-          
+<h3 id="Selection-Sort"><a href="#Selection-Sort" class="headerlink" title="Selection Sort"></a>Selection Sort</h3><p>​    Although <strong>selection sort</strong> is inefficient when sorting a large number of elements, it is the most intuitive algorithm and is quite easy to understand.</p>
+<p>​    Consider sorting n numbers stored in array <strong>a</strong>. First, we select the smallest element and exchange it with a[1]. Then, find the second smallest element and exchange it with a[2]. Keep doing this until we exchange the second largest element with a[n-1]. The C++ code for this algorithm is showed as follows.</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">selectionSort</span><span class="params">(<span class="built_in">vector</span>&lt;T&gt; &amp;a)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> len = a.<span class="built_in">size</span>();</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;len<span class="number">-1</span>;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> minIndex = i;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=i+<span class="number">1</span>;j&lt;len;j++)</span><br><span class="line">            <span class="keyword">if</span>(a[j]&lt;a[minIndex])</span><br><span class="line">                minIndex = j;</span><br><span class="line">       	swap(a[i],a[minIndex]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>​    The time complexity of selection sort is $O(n^2)$.</p>
+<h3 id="Insertion-Sort"><a href="#Insertion-Sort" class="headerlink" title="Insertion Sort"></a>Insertion Sort</h3><p>​    Like selection sort, <strong>insertion sort</strong> has an $O(n^2)$ running time. It works in the way many of us sort a hand of playing cards:black_joker:. The cards in Alice’s left hand are always sorted, and each time she removes a card from the table (usually the top one of the pile) and inserts it into the proper position in her left hand. To find the correct position, she compares it with the cards already in her left hand from right to left.  </p>
+<p>​    The C++ code for insertion sort is showed as follows.</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">insertionSort</span><span class="params">(<span class="built_in">vector</span>&lt;T&gt; &amp;a)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> len = a.<span class="built_in">size</span>();</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;len;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        T key = a[i];</span><br><span class="line">        <span class="keyword">int</span> j = i<span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">while</span>(j&gt;=<span class="number">0</span>&amp;&amp;a[j]&gt;key)<span class="comment">//Why from right to left? To make space for "key".</span></span><br><span class="line">        &#123;</span><br><span class="line">            a[j+<span class="number">1</span>] = a[j];</span><br><span class="line">            j--;</span><br><span class="line">        &#125;</span><br><span class="line">        a[j+<span class="number">1</span>] = key;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Bubble-Sort"><a href="#Bubble-Sort" class="headerlink" title="Bubble Sort"></a>Bubble Sort</h3><p>​    <strong>Bubble Sort</strong> (sometimes it is written as “bubblesort” ?) is another sorting algorithm with an $O(n^2)$ running time, but different from the previous two algorithms, bubble sort moves the i-th smallest element to a[i] implicitly by repeatedly comparing the adjacent two elements and swapping them if they are out of order. The C++ code for bubble sort is showed as follows:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">bubbleSort</span><span class="params">(<span class="built_in">vector</span>&lt;T&gt; &amp;a)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> len = a.<span class="built_in">size</span>();</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;len<span class="number">-1</span>;i++)</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=len<span class="number">-1</span>;j&gt;=i+<span class="number">1</span>;j--)</span><br><span class="line">            <span class="keyword">if</span>(a[j]&lt;a[j<span class="number">-1</span>])</span><br><span class="line">                swap(a[j],a[j<span class="number">-1</span>]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Merge-Sort"><a href="#Merge-Sort" class="headerlink" title="Merge Sort"></a>Merge Sort</h3><p>​    <strong>Merge sort</strong> is a classic example of recursion. It follows the divide-and-conquer paradigm and operates as follows:</p>
+<p>​    <strong>Divide:</strong> Divide a n-element sequence into two subsequences of $n/2$ elements each.</p>
+<p>​    <strong>Conquer:</strong> Sort the two subsequences recursively, using merge sort.</p>
+<p>​    <strong>Combine:</strong> Combine the two sorted subsequences, using a subprogram called <strong>Merge</strong>.</p>
+<p>​    The C++ code for merge sort is showed as follows:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">merge</span><span class="params">(<span class="built_in">vector</span>&lt;T&gt; &amp;a,<span class="keyword">int</span> head,<span class="keyword">int</span> mid,<span class="keyword">int</span> tail)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n1 = mid-head+<span class="number">1</span>,n2 = tail-mid;</span><br><span class="line">    <span class="built_in">vector</span>&lt;T&gt; L,R;<span class="comment">//setup two new arrays</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=head;i&lt;=mid;i++)<span class="comment">//copy the arrays</span></span><br><span class="line">        L.push_back(a[i]);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=mid+<span class="number">1</span>;i&lt;=tail;i++)</span><br><span class="line">        R.push_back(a[i]);</span><br><span class="line">    L.push_back(INF); R.push_back(INF);<span class="comment">//set the sentinel cards</span></span><br><span class="line">    <span class="keyword">int</span> i=<span class="number">0</span>,j=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> k=head;k&lt;=tail;k++)<span class="comment">//compare and place the elements</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(L[i]&lt;R[i])</span><br><span class="line">            a[k] = L[i++];</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            a[k] = R[i++];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">mergeSort</span><span class="params">(<span class="built_in">vector</span>&lt;T&gt; &amp;a,<span class="keyword">int</span> head,<span class="keyword">int</span> tail)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(head&lt;tail)<span class="comment">//set the boundary condition of the recursion</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> mid = (head+tail)/<span class="number">2</span>;</span><br><span class="line">        mergeSort(a,head,mid);</span><br><span class="line">        mergeSort(a,mid+<span class="number">1</span>;tail);<span class="comment">//divide and conquer</span></span><br><span class="line">        merge(a,head,mid,tail);<span class="comment">//combine</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>​      Using the recursion-tree method, we can reach the conclusion that merge sort has a $\Theta(nlgn)$ running time.</p>
+<h3 id="Heap-Sort"><a href="#Heap-Sort" class="headerlink" title="Heap Sort"></a>Heap Sort</h3><p>​    <strong>Heap sort</strong> is a <strong>in-place sorting algorithm</strong> $^1$(just like insertion sort), and has a $O(nlgn)$ running time (just like merge sort). However, a well-designed data structure called max-heap is needed to implement this algorithm.</p>
+<p>​    A <strong>binary heap</strong> is an array that can be considered as a nearly <a href="[https://baike.baidu.com/item/%E5%AE%8C%E5%85%A8%E4%BA%8C%E5%8F%89%E6%A0%91](https://baike.baidu.com/item/完全二叉树)">complete binary tree</a>.</p>
+<p>[1]: only a constant extra memory are required at any time</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -191,57 +224,119 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://allen-yolk.github.io/2020/02/01/Sorting-and-Order-Statistics/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/02/01/ReadMe/" class="archive-article-date">
-  	<time datetime="2020-02-01T08:58:54.040Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-01</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/02/01/ReadMe/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ReadMe</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/01/ReadMe/">ReadMe</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">迷惑行为</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Sorting-Algorithms"><span class="toc-number">1.</span> <span class="toc-text">Sorting Algorithms</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Definition-of-sorting-Problems"><span class="toc-number">1.1.</span> <span class="toc-text">Definition of sorting Problems</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Selection-Sort"><span class="toc-number">1.2.</span> <span class="toc-text">Selection Sort</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Insertion-Sort"><span class="toc-number">1.3.</span> <span class="toc-text">Insertion Sort</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Bubble-Sort"><span class="toc-number">1.4.</span> <span class="toc-text">Bubble Sort</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Merge-Sort"><span class="toc-number">1.5.</span> <span class="toc-text">Merge Sort</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Heap-Sort"><span class="toc-number">1.6.</span> <span class="toc-text">Heap Sort</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
   
-    </div></section>
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -268,8 +363,8 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
