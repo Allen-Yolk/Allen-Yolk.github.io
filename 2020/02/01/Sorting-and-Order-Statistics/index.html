@@ -16,7 +16,7 @@
 <meta property="og:description" content="Sorting AlgorithmsDefinition of sorting Problems​    A sorting problem is defined as followed: ​    Input: A sequence of n numbers : &lt;$a_1, a_2, \dots ,a_n$&gt;. ​    Output: A permutation &lt;$a_1">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-02-01T09:10:42.775Z">
-<meta property="article:modified_time" content="2020-02-02T04:42:29.099Z">
+<meta property="article:modified_time" content="2020-02-02T04:55:45.739Z">
 <meta property="article:author" content="Allen Yolk">
 <meta property="article:tag" content="迷惑行为">
 <meta name="twitter:card" content="summary">
@@ -64,7 +64,7 @@
 	        
 				<li><a href="/tags/%E8%BF%B7%E6%83%91%E8%A1%8C%E4%B8%BA/">Confusing Behaviors/迷惑行为</a></li>
 	        
-				<li><a href="/tags/%E6%97%A5%E5%B8%B8%EF%BC%88%E6%96%BD%E5%B7%A5ing%EF%BC%89/">Daily/日常</a></li>
+				<li><a href="/tags/%E6%97%A5%E5%B8%B8/">Daily/日常</a></li>
 	        
 				<li><a href="/archives/index.html">Archives/所有文章</a></li>
 	        
@@ -142,7 +142,7 @@
 		        
 					<li style="width: 25%"><a href="/tags/%E8%BF%B7%E6%83%91%E8%A1%8C%E4%B8%BA/">Confusing Behaviors/迷惑行为</a></li>
 		        
-					<li style="width: 25%"><a href="/tags/%E6%97%A5%E5%B8%B8%EF%BC%88%E6%96%BD%E5%B7%A5ing%EF%BC%89/">Daily/日常</a></li>
+					<li style="width: 25%"><a href="/tags/%E6%97%A5%E5%B8%B8/">Daily/日常</a></li>
 		        
 					<li style="width: 25%"><a href="/archives/index.html">Archives/所有文章</a></li>
 		        
@@ -263,7 +263,7 @@
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//extract from counting sort</span></span><br><span class="line"><span class="keyword">int</span> <span class="built_in">min</span> = a[<span class="number">0</span>],<span class="built_in">max</span> = a[<span class="number">0</span>],len = a.<span class="built_in">size</span>();</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;len;i++)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span>(a[i]&lt;<span class="built_in">min</span>) <span class="built_in">min</span> = a[i];</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(a[i]&gt;<span class="built_in">max</span>) <span class="built_in">max</span> = a[i];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>​    However, the following practice has a less constant factor:</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//adapted from counting sort</span></span><br><span class="line"><span class="keyword">int</span> len = a.<span class="built_in">size</span>();</span><br><span class="line"><span class="keyword">if</span>(len%<span class="number">2</span>)<span class="comment">//initialize maxA and minA</span></span><br><span class="line">    <span class="keyword">int</span> maxA = a[len<span class="number">-1</span>],minA = a[len<span class="number">-1</span>];</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span>(a[len<span class="number">-1</span>]&gt;a[len<span class="number">-2</span>])</span><br><span class="line">        <span class="keyword">int</span> maxA = a[len<span class="number">-1</span>],minA = a[len<span class="number">-2</span>];</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">int</span> maxA = a[len<span class="number">-2</span>],minA = a[len<span class="number">-1</span>];</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=(len<span class="number">-1</span>)/<span class="number">2</span>;i++)<span class="comment">//compare them in pairs</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">int</span> tempmax = <span class="built_in">max</span>(a[<span class="number">2</span>*i<span class="number">-1</span>],a[<span class="number">2</span>*i<span class="number">-2</span>]),tempmin = <span class="built_in">min</span>(a[<span class="number">2</span>*i<span class="number">-1</span>],a[<span class="number">2</span>*i<span class="number">-2</span>]);</span><br><span class="line">    <span class="keyword">if</span>(tempmax&gt;maxA)</span><br><span class="line">        maxA = tempmax;</span><br><span class="line">    <span class="keyword">if</span>(tempmin&lt;minA)</span><br><span class="line">        minA = tempmin</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//adapted from counting sort</span></span><br><span class="line"><span class="keyword">int</span> len = a.<span class="built_in">size</span>();</span><br><span class="line"><span class="keyword">if</span>(len%<span class="number">2</span>)<span class="comment">//initialize maxA and minA</span></span><br><span class="line">    <span class="keyword">int</span> maxA = a[len<span class="number">-1</span>],minA = a[len<span class="number">-1</span>];</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span>(a[len<span class="number">-1</span>]&gt;a[len<span class="number">-2</span>])</span><br><span class="line">        <span class="keyword">int</span> maxA = a[len<span class="number">-1</span>],minA = a[len<span class="number">-2</span>];</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">int</span> maxA = a[len<span class="number">-2</span>],minA = a[len<span class="number">-1</span>];</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=(len<span class="number">-1</span>)/<span class="number">2</span>;i++)<span class="comment">//compare them in pairs</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">int</span> tempmax = <span class="built_in">max</span>(a[<span class="number">2</span>*i<span class="number">-1</span>],a[<span class="number">2</span>*i<span class="number">-2</span>]),tempmin = <span class="built_in">min</span>(a[<span class="number">2</span>*i<span class="number">-1</span>],a[<span class="number">2</span>*i<span class="number">-2</span>]);</span><br><span class="line">    <span class="keyword">if</span>(tempmax&gt;maxA)</span><br><span class="line">        maxA = tempmax;</span><br><span class="line">    <span class="keyword">if</span>(tempmin&lt;minA)</span><br><span class="line">        minA = tempmin;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>​    The former practice needs $2(n-1)$ comparisons, while the latter needs at most $3\lfloor n/2\rfloor$ comparisons.</p>
 <h3 id="An-Expected-linear-time-Selection-Algorithm-Adapted-from-Quick-Sort"><a href="#An-Expected-linear-time-Selection-Algorithm-Adapted-from-Quick-Sort" class="headerlink" title="An Expected-linear-time Selection Algorithm Adapted from Quick Sort"></a>An Expected-linear-time Selection Algorithm Adapted from Quick Sort</h3><p>​    After learning quick sort, this selection algorithm in $\Theta(n)$ expected running time is facile. Different from quick sort, we only need to do recursion on one side.</p>
@@ -353,6 +353,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2020/02/02/2019%E5%AD%A6%E5%B9%B4%E6%98%A5%E5%AD%A3%E5%AD%A6%E6%9C%9F%E9%80%89%E8%AF%BE%E5%AE%9E%E5%86%B5/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          2019学年春季学期选课实况
+        
+      </div>
+    </a>
   
   
     <a href="/2020/02/01/ReadMe/" id="article-nav-older" class="article-nav-link-wrap">
@@ -537,6 +546,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">迷惑行为</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">日常</a>
               </li>
             
             <div class="clearfix"></div>
