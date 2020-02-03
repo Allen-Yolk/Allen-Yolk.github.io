@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: 日常 | Allen-Yolk滴博客</title>
+  <title>Number-Theoretic Algorithms | Allen-Yolk滴博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Allen-Yolk滴博客">
-<meta property="og:url" content="http://yoursite.com/tags/%E6%97%A5%E5%B8%B8/index.html">
+  <meta name="description" content="​    Number theory was once viewed as a beautiful but largely useless subject in mathematics. However, number-theoretic algorithms are widely used today due in part to the invention of cryptographic">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Number-Theoretic Algorithms">
+<meta property="og:url" content="http://yoursite.com/2020/02/03/Number-Theoretic-Algorithms/index.html">
 <meta property="og:site_name" content="Allen-Yolk滴博客">
+<meta property="og:description" content="​    Number theory was once viewed as a beautiful but largely useless subject in mathematics. However, number-theoretic algorithms are widely used today due in part to the invention of cryptographic">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-02-03T12:18:06.358Z">
+<meta property="article:modified_time" content="2020-02-03T16:18:40.866Z">
 <meta property="article:author" content="Allen Yolk">
+<meta property="article:tag" content="迷惑行为">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Allen-Yolk滴博客" type="application/atom+xml">
@@ -155,59 +160,175 @@
           </div>
           <div id="js-content" class="content-ll">
             
-  
-  
+<article id="post-Number-Theoretic-Algorithms" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/02/02/2019%E5%AD%A6%E5%B9%B4%E6%98%A5%E5%AD%A3%E5%AD%A6%E6%9C%9F%E9%80%89%E8%AF%BE%E5%AE%9E%E5%86%B5/" class="archive-article-date">
-  	<time datetime="2020-02-02T14:18:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-02</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/02/2019%E5%AD%A6%E5%B9%B4%E6%98%A5%E5%AD%A3%E5%AD%A6%E6%9C%9F%E9%80%89%E8%AF%BE%E5%AE%9E%E5%86%B5/">2019学年春季学期选课实况</a>
+    <h1 class="article-title" itemprop="name">
+      Number-Theoretic Algorithms
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2020/02/03/Number-Theoretic-Algorithms/" class="archive-article-date">
+  	<time datetime="2020-02-03T12:18:06.358Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>​    Number theory was once viewed as a beautiful but largely useless subject in mathematics. However, number-theoretic algorithms are widely used today due in part to the invention of cryptographic schemes based on large prime numbers.</p>
+</blockquote>
+<a id="more"></a>
+
+<h2 id="Greatest-Common-Divisor"><a href="#Greatest-Common-Divisor" class="headerlink" title="Greatest Common Divisor"></a>Greatest Common Divisor</h2><h3 id="Euclid’s-Algorithm"><a href="#Euclid’s-Algorithm" class="headerlink" title="Euclid’s Algorithm"></a>Euclid’s Algorithm</h3><p>​    Euclid’s algorithm is a commonly used method for computing the greatest common divisor of two integers, which is based on the following theorem:</p>
+<p><strong>GCD recursion theorem:</strong> For any nonnegative integer $a$ and any positive integer $b$, $gcd(a,b)=gcd(b,a\mod b)$.</p>
+<p>​    The C++ code for Euclid’s algorithm is showed below:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(b==<span class="number">0</span>)</span><br><span class="line">        <span class="keyword">return</span> a;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">return</span> gcd(b,a%b);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Extended-Euclid’s-Algorithm"><a href="#Extended-Euclid’s-Algorithm" class="headerlink" title="Extended Euclid’s Algorithm"></a>Extended Euclid’s Algorithm</h3><p>​    We can rewrite Euclid’s algorithm to output the gcd in a linear expression form: $gcd(a,b)=ax+by \quad (x,y \in Z)$.</p>
+<p>​    The process of Euclid’s algorithms draws the conclusion that $gcd(a,b)=ax+by=bx’+(a- \lfloor a/b \rfloor *b)y’$.</p>
+<p>​    By undetermined coefficient method, we have $x=y’$ and $y=x’-\lfloor a/b \rfloor*b$ , which are the recursion formulas.</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> x,<span class="keyword">int</span> y;<span class="comment">//global variables</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">exgcd</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(b)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> gcd = exgcd(b,a%b);</span><br><span class="line">        <span class="keyword">int</span> k = x;</span><br><span class="line">        x = y; y = k-a/b*b;</span><br><span class="line">        <span class="keyword">return</span> gcd;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        y=<span class="number">0</span>; x=<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">return</span> a;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>​    Extended Euclid’s algorithm is the basis of solving modular linear equations and many other number-theoretic problems.</p>
+<h2 id="Solving-Modular-Linear-Equations"><a href="#Solving-Modular-Linear-Equations" class="headerlink" title="Solving Modular Linear Equations"></a>Solving Modular Linear Equations</h2><p>​        </p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">日常</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">迷惑行为</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://allen-yolk.github.io/2020/02/03/Number-Theoretic-Algorithms/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2020/02/02/2019%E5%AD%A6%E5%B9%B4%E6%98%A5%E5%AD%A3%E5%AD%A6%E6%9C%9F%E9%80%89%E8%AF%BE%E5%AE%9E%E5%86%B5/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">2019学年春季学期选课实况</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Greatest-Common-Divisor"><span class="toc-number">1.</span> <span class="toc-text">Greatest Common Divisor</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Euclid’s-Algorithm"><span class="toc-number">1.1.</span> <span class="toc-text">Euclid’s Algorithm</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Extended-Euclid’s-Algorithm"><span class="toc-number">1.2.</span> <span class="toc-text">Extended Euclid’s Algorithm</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Solving-Modular-Linear-Equations"><span class="toc-number">2.</span> <span class="toc-text">Solving Modular Linear Equations</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -234,9 +355,9 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
