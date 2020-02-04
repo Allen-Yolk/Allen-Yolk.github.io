@@ -16,7 +16,7 @@
 <meta property="og:description" content="​    Number theory was once viewed as a beautiful but largely useless subject in mathematics. However, number-theoretic algorithms are widely used today due in part to the invention of cryptographic">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-02-03T12:18:06.358Z">
-<meta property="article:modified_time" content="2020-02-03T16:18:40.866Z">
+<meta property="article:modified_time" content="2020-02-04T17:23:56.961Z">
 <meta property="article:author" content="Allen Yolk">
 <meta property="article:tag" content="迷惑行为">
 <meta name="twitter:card" content="summary">
@@ -193,10 +193,15 @@
 <h3 id="Extended-Euclid’s-Algorithm"><a href="#Extended-Euclid’s-Algorithm" class="headerlink" title="Extended Euclid’s Algorithm"></a>Extended Euclid’s Algorithm</h3><p>​    We can rewrite Euclid’s algorithm to output the gcd in a linear expression form: $gcd(a,b)=ax+by \quad (x,y \in Z)$.</p>
 <p>​    The process of Euclid’s algorithms draws the conclusion that $gcd(a,b)=ax+by=bx’+(a- \lfloor a/b \rfloor *b)y’$.</p>
 <p>​    By undetermined coefficient method, we have $x=y’$ and $y=x’-\lfloor a/b \rfloor*b$ , which are the recursion formulas.</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> x,<span class="keyword">int</span> y;<span class="comment">//global variables</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">exgcd</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(b)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> gcd = exgcd(b,a%b);</span><br><span class="line">        <span class="keyword">int</span> k = x;</span><br><span class="line">        x = y; y = k-a/b*b;</span><br><span class="line">        <span class="keyword">return</span> gcd;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        y=<span class="number">0</span>; x=<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">return</span> a;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> x,<span class="keyword">int</span> y;<span class="comment">//global variables</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">exgcd</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(b)<span class="comment">//recursion</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> gcd = exgcd(b,a%b);</span><br><span class="line">        <span class="keyword">int</span> k = x;</span><br><span class="line">        x = y; y = k-a/b*b;</span><br><span class="line">        <span class="keyword">return</span> gcd;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span><span class="comment">//boundary condition</span></span><br><span class="line">    &#123;</span><br><span class="line">        y=<span class="number">0</span>; x=<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">return</span> a;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>​    Extended Euclid’s algorithm is the basis of solving modular linear equations and many other number-theoretic problems.</p>
-<h2 id="Solving-Modular-Linear-Equations"><a href="#Solving-Modular-Linear-Equations" class="headerlink" title="Solving Modular Linear Equations"></a>Solving Modular Linear Equations</h2><p>​        </p>
+<h2 id="Solving-Modular-Linear-Equations"><a href="#Solving-Modular-Linear-Equations" class="headerlink" title="Solving Modular Linear Equations"></a>Solving Modular Linear Equations</h2><p>​    <em>This part involves a lot of knowledge about group theory, especially the definition and theorem of subgroup. Fortunately, <strong>Introduction to Algorithms</strong> provides us with enough introduction and explanation. Please try to have a basic understanding of it!</em></p>
+<p>​    Let’s consider the problem of finding solution to the modular linear equation: $ax \equiv b(mod\ n)$, where $a&gt;0$ and $n&gt;0$.</p>
+<p>​    Let $\langle a \rangle$ denote the subgroup of $Z_n$ (additive group modulo n) generated by $a$. The following theorem describes $\langle a \rangle$ precisely:</p>
+<p><strong>Theorem 1:</strong> For any positive integers $a$ and $n$, if $d=gcd(a,n)$, then $\langle a \rangle=\langle d \rangle = \lbrace 0,d,2d,\dots,(n/d-1)d \rbrace$ in $Z_n$, and thus $|\langle a \rangle|=n/d$.</p>
+<p>​    According to <strong>Theorem 1</strong>, it’s a matter of fact that the linear equation has a solution if and only if $b \in \langle a \rangle$, which means $gcd(a,n) \ | \ b$. We can also know that the equation either has no solutions, or has $d$ distinct solutions modulo n. </p>
+<p>​    Our next step is to find a special solution so that we can express all of them, since the intervals between any two adjacent solutions are the same.</p>
 
       
 
@@ -462,11 +467,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">日常</a>
+                <a href="javascript:void(0)" class="js-tag color5">迷惑行为</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">迷惑行为</a>
+                <a href="javascript:void(0)" class="js-tag color3">日常</a>
               </li>
             
             <div class="clearfix"></div>
