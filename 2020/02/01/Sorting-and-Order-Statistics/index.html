@@ -16,7 +16,7 @@
 <meta property="og:description" content="Sorting AlgorithmsDefinition of sorting Problems​    A sorting problem is defined as followed: ​    Input: A sequence of n numbers : &lt;$a_1, a_2, \dots ,a_n$&gt;. ​    Output: A permutation &lt;$a_1">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-02-01T09:10:42.775Z">
-<meta property="article:modified_time" content="2020-02-02T04:55:45.739Z">
+<meta property="article:modified_time" content="2020-02-11T15:13:03.769Z">
 <meta property="article:author" content="Allen Yolk">
 <meta property="article:tag" content="迷惑行为">
 <meta name="twitter:card" content="summary">
@@ -249,7 +249,7 @@
 
 <h3 id="Radix-Sort"><a href="#Radix-Sort" class="headerlink" title="Radix Sort"></a>Radix Sort</h3><p>​    Intuitively, we sort integers on their most significant digit, and then sort each of the several piles recursively. But <strong>radix sort</strong> solve the problem of integer sorting counterintuitively by sorting on the least significant digit first.  It is essential that the sorting algorithm radix sort calls must be <strong>stable</strong>: it should preserves the relative order of the elements with equivalent values. Usually, counting sort is the best choice. Btw, insertion sort and merge sort are also stable sorts.</p>
 <p>​    The pseudocode of radix sort is showed as follows:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">RADIX-SORT(A,d)</span><br><span class="line"></span><br><span class="line">for i&#x3D;1 to d</span><br><span class="line"></span><br><span class="line">	use a stable sort to sort array A on digit i</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">RADIX-SORT(A,d)</span><br><span class="line">	for i&#x3D;1 to d</span><br><span class="line">		use a stable sort to sort array A on digit i</span><br></pre></td></tr></table></figure>
 
 <h2 id="Order-Statistics"><a href="#Order-Statistics" class="headerlink" title="Order Statistics"></a>Order Statistics</h2><h3 id="Definition-of-Order-Statistics-and-Selection-Problem"><a href="#Definition-of-Order-Statistics-and-Selection-Problem" class="headerlink" title="Definition of  Order Statistics and Selection Problem"></a>Definition of  Order Statistics and Selection Problem</h3><p>​    The $ith$ <strong>order statistic</strong> of n elements is the $ith$ smallest element. Specially, after sorting the array, the element with index $i= \lfloor(n+1)/2\rfloor $ is called the <strong>lower median</strong>, while the one with index $i= \lceil(n+1)/2\rceil$ is called the <strong>upper median</strong>. The <strong>median</strong> is the average value of them.</p>
 <p>​    A <strong>selection problem</strong> can be defined as follows:</p>
@@ -545,11 +545,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">迷惑行为</a>
+                <a href="javascript:void(0)" class="js-tag color3">日常</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">日常</a>
+                <a href="javascript:void(0)" class="js-tag color5">迷惑行为</a>
               </li>
             
             <div class="clearfix"></div>
