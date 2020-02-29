@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: 迷惑行为 | Allen-Yolk滴博客</title>
+  <title>奇怪的类复制 | Allen-Yolk滴博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Allen-Yolk滴博客">
-<meta property="og:url" content="http://yoursite.com/tags/%E8%BF%B7%E6%83%91%E8%A1%8C%E4%B8%BA/index.html">
+  <meta name="description" content="Key words: 类与对象，复制构造函数 From: 程设">
+<meta property="og:type" content="article">
+<meta property="og:title" content="奇怪的类复制">
+<meta property="og:url" content="http://yoursite.com/2020/02/24/%E5%A5%87%E6%80%AA%E7%9A%84%E7%B1%BB%E5%A4%8D%E5%88%B6/index.html">
 <meta property="og:site_name" content="Allen-Yolk滴博客">
+<meta property="og:description" content="Key words: 类与对象，复制构造函数 From: 程设">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-02-24T15:57:28.000Z">
+<meta property="article:modified_time" content="2020-02-26T16:54:22.953Z">
 <meta property="article:author" content="Allen Yolk">
+<meta property="article:tag" content="不要停下来啊">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Allen-Yolk滴博客" type="application/atom+xml">
@@ -161,173 +166,231 @@
           </div>
           <div id="js-content" class="content-ll">
             
-  
-  
+<article id="post-奇怪的类复制" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      奇怪的类复制
+    </h1>
+  
+
+        
+        <a href="/2020/02/24/%E5%A5%87%E6%80%AA%E7%9A%84%E7%B1%BB%E5%A4%8D%E5%88%B6/" class="archive-article-date">
+  	<time datetime="2020-02-24T15:57:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-24</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Key words: 类与对象，复制构造函数</p>
+<p>From: 程设</p>
+<a id="more"></a>
+
+<h2 id="奇怪的类复制"><a href="#奇怪的类复制" class="headerlink" title="奇怪的类复制"></a>奇怪的类复制</h2><h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>​        程序填空，使其分三行输出：9 22 5</p>
+<p>​        题干程序如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Sample</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="keyword">int</span> v;</span><br><span class="line"><span class="comment">// 请在此处补充你的代码</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">PrintAndDouble</span><span class="params">(Sample o)</span></span>&#123;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; o.v;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="function">Sample <span class="title">a</span><span class="params">(<span class="number">5</span>)</span></span>;</span><br><span class="line">	Sample b = a;</span><br><span class="line">	PrintAndDouble(b);</span><br><span class="line">	Sample c = <span class="number">20</span>;</span><br><span class="line">	PrintAndDouble(c);</span><br><span class="line">	Sample d;</span><br><span class="line">	d = a;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; d.v;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>​        <strong>输入：</strong> 无</p>
+<p>​        <strong>输出：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">9</span><br><span class="line">22</span><br><span class="line">5</span><br></pre></td></tr></table></figure>
+
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>​        “刚从上学期计概过来的，这就是程设吗，i了i了。”</p>
+<p>​        与计概有所不同，程设在前期大量涉及C++面向对象的复杂语法，因此学习方法、题目风格都会又很大的改变。这一类填空题看着挺意义不明，但其实对熟悉C++机制还是大有裨益的。</p>
+<p>​        观察各个变量的数值变化，总结出以下表格：</p>
+<table>
+<thead>
+<tr>
+<th align="center">对象</th>
+<th align="center">直观初值</th>
+<th align="center">输出值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">a</td>
+<td align="center">5</td>
+<td align="center">/</td>
+</tr>
+<tr>
+<td align="center">b</td>
+<td align="center">5</td>
+<td align="center">9</td>
+</tr>
+<tr>
+<td align="center">c</td>
+<td align="center">20</td>
+<td align="center">22</td>
+</tr>
+<tr>
+<td align="center">d</td>
+<td align="center">5</td>
+<td align="center">5</td>
+</tr>
+</tbody></table>
+<p>​        题目提示我们，这道题的玄机在于复制构造函数。为此，需要调查每个变量的整个生命周期。</p>
+<ul>
+<li>a：用含整型参数的构造函数创建，随后没有对a的变动。</li>
+<li>b：用a初始化创建（调用一次复制构造函数），随后以b为实参调用函数<code>PrintAndDouble(b)</code>（再次调用复制构造函数）。共2次。</li>
+<li>c：直接用整型初始化（说明类内一定定义了类型转换构造函数int-&gt;Sample），随后以c为实参调用函数<code>PrintAndDouble(c)</code>（调用复制构造函数）。共1次。</li>
+<li>d：创建时为初始化，随后用a赋值（并非初始化，<strong>不</strong>调用复制构造函数），然后用cout输出属性值。</li>
+</ul>
+<p>​        这样一来就可以看出，我们需要在复制构造函数中完成+2操作。同时，还要写一个类型转换构造函数（带默认参数值），以满足各个对象的初始化形式。</p>
+<h3 id="解答"><a href="#解答" class="headerlink" title="解答"></a>解答</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Sample</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="keyword">int</span> v;</span><br><span class="line">    <span class="comment">//填入代码</span></span><br><span class="line">	Sample(<span class="keyword">int</span> i=<span class="number">0</span>)&#123;            <span class="comment">//类型转换构造函数，带默认值，实现无参构造</span></span><br><span class="line">		v = i;</span><br><span class="line">	&#125;;</span><br><span class="line">	Sample(<span class="keyword">const</span> Sample &amp;a)&#123;   <span class="comment">//复制构造函数</span></span><br><span class="line">		v = a.v+<span class="number">2</span>; </span><br><span class="line">	&#125;;</span><br><span class="line">    <span class="comment">//以上是填入的代码</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">PrintAndDouble</span><span class="params">(Sample o)</span></span>&#123;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; o.v;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="function">Sample <span class="title">a</span><span class="params">(<span class="number">5</span>)</span></span>;</span><br><span class="line">	Sample b = a;</span><br><span class="line">	PrintAndDouble(b);</span><br><span class="line">	Sample c = <span class="number">20</span>;</span><br><span class="line">	PrintAndDouble(c);</span><br><span class="line">	Sample d;</span><br><span class="line">	d = a;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; d.v;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ul>
+<li>复制构造函数的参数为：<code>A&amp; a</code> 或者 <code>const A&amp; a</code> 。如果<strong>函数内不改变参数值的话，后一种写法兼容前一种写法</strong>。比如这题，用普通引用会compile error，因为编译器认为<code>Sample c = 20</code>有可能以20转换出的临时对象（视作常量）作为参数调用复制构造函数（当然，实际上是不会调用复制构造函数的。编译器过于谨慎x）。</li>
+<li>复制构造函数调用时机：<ol>
+<li><strong>用对象初始化</strong>同类对象时（调用后者的复制构造函数）；</li>
+<li>函数参数中含有类A的对象（引用则不算），调用该函数时；</li>
+<li>函数返回值是类A的对象，在函数返回时。</li>
+</ol>
+</li>
+</ul>
+<p>​        第一次写题解，感觉自己貌似太啰嗦了🤐。下次少写点……</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/02/07/Elementary-Graph-Algorithms/" class="archive-article-date">
-  	<time datetime="2020-02-07T08:42:08.365Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/07/Elementary-Graph-Algorithms/">Elementary Graph Algorithms</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">迷惑行为</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">不要停下来啊</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://allen-yolk.github.io/2020/02/24/%E5%A5%87%E6%80%AA%E7%9A%84%E7%B1%BB%E5%A4%8D%E5%88%B6/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/02/03/Number-Theoretic-Algorithms/" class="archive-article-date">
-  	<time datetime="2020-02-03T12:18:06.358Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-03</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2020/02/27/%E8%BF%94%E5%9B%9E%E4%BB%80%E4%B9%88%E6%89%8D%E5%A5%BD%E5%91%A2/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          返回什么才好呢
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/02/24/ReadMe-Problems/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ReadMe-Problems</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/03/Number-Theoretic-Algorithms/">Number-Theoretic Algorithms</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">迷惑行为</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#奇怪的类复制"><span class="toc-number">1.</span> <span class="toc-text">奇怪的类复制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#题目描述"><span class="toc-number">1.1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#思路"><span class="toc-number">1.2.</span> <span class="toc-text">思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解答"><span class="toc-number">1.3.</span> <span class="toc-text">解答</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#总结"><span class="toc-number">1.4.</span> <span class="toc-text">总结</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/02/01/Sorting-and-Order-Statistics/" class="archive-article-date">
-  	<time datetime="2020-02-01T09:10:42.775Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-01</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/01/Sorting-and-Order-Statistics/">Sorting and Order Statistics</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">迷惑行为</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/02/01/ReadMe-ConfusingBehaviors/" class="archive-article-date">
-  	<time datetime="2020-02-01T08:58:54.040Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/01/ReadMe-ConfusingBehaviors/">ReadMe-ConfusingBehaviors</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">迷惑行为</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -354,9 +417,9 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
