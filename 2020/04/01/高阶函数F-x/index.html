@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Surprise! | Allen-Yolk滴博客</title>
+  <title>高阶函数F(x) | Allen-Yolk滴博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Mar 3rd, 2020  Tuesday                                                                                                                           Sunny ​        Tomorrow, March the fourth, will be a sp">
+  <meta name="description" content="Key words: C++11，lambda表达式 From: 程设">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Surprise!">
-<meta property="og:url" content="http://yoursite.com/2020/03/04/Surprise/index.html">
+<meta property="og:title" content="高阶函数F(x)">
+<meta property="og:url" content="http://yoursite.com/2020/04/01/%E9%AB%98%E9%98%B6%E5%87%BD%E6%95%B0F-x/index.html">
 <meta property="og:site_name" content="Allen-Yolk滴博客">
-<meta property="og:description" content="Mar 3rd, 2020  Tuesday                                                                                                                           Sunny ​        Tomorrow, March the fourth, will be a sp">
+<meta property="og:description" content="Key words: C++11，lambda表达式 From: 程设">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-03-04T00:20:36.000Z">
-<meta property="article:modified_time" content="2020-03-04T16:30:48.718Z">
+<meta property="article:published_time" content="2020-04-01T08:13:05.000Z">
+<meta property="article:modified_time" content="2020-04-01T08:55:11.523Z">
 <meta property="article:author" content="Allen Yolk">
-<meta property="article:tag" content="日常">
+<meta property="article:tag" content="不要停下来啊">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Allen-Yolk滴博客" type="application/atom+xml">
@@ -166,31 +166,69 @@
           </div>
           <div id="js-content" class="content-ll">
             
-<article id="post-Surprise" class="article article-type-post " itemscope itemprop="blogPost">
+<article id="post-高阶函数F-x" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Surprise!
+      高阶函数F(x)
     </h1>
   
 
         
-        <a href="/2020/03/04/Surprise/" class="archive-article-date">
-  	<time datetime="2020-03-04T00:20:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-04</time>
+        <a href="/2020/04/01/%E9%AB%98%E9%98%B6%E5%87%BD%E6%95%B0F-x/" class="archive-article-date">
+  	<time datetime="2020-04-01T08:13:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-01</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Mar 3rd, 2020  Tuesday                                                                                                                           Sunny</p>
-<p>​        Tomorrow, March the fourth, will be a special day. Giovanni, one of the friends I made when I first came to PKU, will ushered his 19th birthday. However, we are not together at the campus, and allegedly he is now being occupied with his <em>Electromagnetic</em> assignment and <em>Data Structure and Algorithms</em> report (he is at the college of Earth and Space Science). So, several friends and I have reached a consensus that we’re going to prepare a Wechat post send it to him in the midnight. We, about fifteen people in total, just typed down what we wanted to say to him, including his first impression on us, his funniest past and our blessings to him.</p>
-<p>​        To quote a sentence from Tom at the end of the post, “Spreading happiness is what Giovanni has always been doing.” Remember that we watched <em>Tenki no Ko</em> together till late, and eight guys went for a stroll around the Weiming Lake in the midnight, sharing their love stroy (although I could hardly say anthing when the topic turned to love stroy). </p>
-<p>​        Wish him a happy birthday in advance!</p>
-<p>Back notes: Okay, he received our post with little surprise but great joy just now.</p>
+        <p>Key words: C++11，lambda表达式</p>
+<p>From: 程设</p>
+<a id="more"></a>
+
+<h2 id="高阶函数F-x"><a href="#高阶函数F-x" class="headerlink" title="高阶函数F(x)"></a>高阶函数F(x)</h2><h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>​        lisp语言中有高阶函数的概念，即函数可以作为函数的参数，也可以作为函数的返回值。例如:</p>
+<p>​        (define (f n)  (lambda (x) (+ x n)))</p>
+<p>​        定义了一个函数f，该函数的返回值是另一个函数，假定称为g即 (lambda (x) (+ x n) 此函数功能是参数为x，返回值为x + n。 于是 ((f 7) 9)  如下执行</p>
+<p>​        (f 7)以参数7调用f, f的返回值是g,n的值为7</p>
+<p>​        ((f 7) 9)等价于 (g 9)，即以参数9调用g。 因 n = 7, x = 9 ,因此(g 9)返回值为16</p>
+<p>​        编写一个C++的通用函数模板f,使之能完成类似于lisp函数f的功能。 对于下面的程序，输出结果是</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">16</span><br><span class="line">world hello!</span><br><span class="line">world!</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="comment">// 在此处补充你的代码</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">   <span class="built_in">cout</span> &lt;&lt; f&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt;(<span class="number">7</span>)(<span class="number">9</span>) &lt;&lt; <span class="built_in">endl</span>;   <span class="comment">//16</span></span><br><span class="line">   <span class="built_in">cout</span> &lt;&lt; f&lt;<span class="built_in">string</span>,<span class="built_in">string</span>&gt; (<span class="string">" hello!"</span>)(<span class="string">"world"</span>)  &lt;&lt;<span class="built_in">endl</span>; <span class="comment">// world hello!</span></span><br><span class="line">   <span class="built_in">cout</span> &lt;&lt; f&lt;<span class="keyword">char</span>,<span class="built_in">string</span>&gt; (<span class="string">'!'</span>)(<span class="string">"world"</span>) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">   </span><br><span class="line">   </span><br><span class="line">   <span class="keyword">return</span> <span class="number">0</span>;    <span class="comment">//world!</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="解答"><a href="#解答" class="headerlink" title="解答"></a>解答</h3><p>​        一道lambda表达式的练习。只需要写一个函数模板f，使得它的返回值是一个lambda表达式即可。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 在此处补充你的代码</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;functional&gt;</span></span></span><br><span class="line"><span class="keyword">template</span>&lt;<span class="class"><span class="keyword">class</span> <span class="title">T1</span>,<span class="title">class</span> <span class="title">T2</span>&gt;</span></span><br><span class="line"><span class="class"><span class="title">function</span>&lt;T2(T2)&gt; <span class="title">f</span>(<span class="title">T1</span> <span class="title">x</span>)&#123;</span></span><br><span class="line">    <span class="keyword">return</span> [=](T2 y)&#123;<span class="keyword">return</span> y+x;&#125;;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//end</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">   <span class="built_in">cout</span> &lt;&lt; f&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt;(<span class="number">7</span>)(<span class="number">9</span>) &lt;&lt; <span class="built_in">endl</span>;   <span class="comment">//16</span></span><br><span class="line">   <span class="built_in">cout</span> &lt;&lt; f&lt;<span class="built_in">string</span>,<span class="built_in">string</span>&gt; (<span class="string">" hello!"</span>)(<span class="string">"world"</span>)  &lt;&lt;<span class="built_in">endl</span>; <span class="comment">// world hello!</span></span><br><span class="line">   <span class="built_in">cout</span> &lt;&lt; f&lt;<span class="keyword">char</span>,<span class="built_in">string</span>&gt; (<span class="string">'!'</span>)(<span class="string">"world"</span>) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">   </span><br><span class="line">   </span><br><span class="line">   <span class="keyword">return</span> <span class="number">0</span>;    <span class="comment">//world!</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>​        注：若将填入代码改成：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span>&lt;<span class="class"><span class="keyword">class</span> <span class="title">T1</span>,<span class="title">class</span> <span class="title">T2</span>&gt;</span></span><br><span class="line"><span class="class"><span class="title">auto</span> <span class="title">f</span>(<span class="title">T1</span> <span class="title">x</span>)&#123;</span></span><br><span class="line">    <span class="keyword">return</span> [=](T2 y)&#123;<span class="keyword">return</span> y+x;&#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>​        在本机上可以通过，但在poj上报了CE。故需要严格指定f的返回类型。lambda表达式的类型可以用<code>function&lt;T1(T2,...)&gt;</code>来表示：T1为lambda表达式返回值类型，而T2,…为参数类型。</p>
+<p>​        本题还有一道进阶版：</p>
+<h2 id="高阶函数Combine"><a href="#高阶函数Combine" class="headerlink" title="高阶函数Combine"></a>高阶函数Combine</h2><h3 id="题目描述-1"><a href="#题目描述-1" class="headerlink" title="题目描述"></a>题目描述</h3><p>描述</p>
+<p>​        Lisp语言中有高阶函数的概念，即函数可以作为函数的参数，也可以作为函数的返回值。例如:</p>
+<p>​        (define (square x) (* xx))  定义了一个求x的平方的函数</p>
+<p>​        (define (inc x) (+ x1))   定义了一个求x+1的函数</p>
+<p>​        (define (combine f g)    (lambda (x) (f (+ (fx) (g x)))))</p>
+<p>​        (combine f g) 返回函数k , k(x) = f( f(x)+g(x))</p>
+<p>​        因此 ((combine square inc) 3) 的返回值就是169</p>
+<p>​        此处</p>
+<p>​        f(x) = x*x    g(x) = x + 1</p>
+<p>​        k(x) = (x*x+(x+1)) ^2</p>
+<p>​        ((combine square inc) 3) 即是 k(3)</p>
+<p>​        因此返回值为169 用C++实现类似的combine函数模板，使得下面的程序输出结果为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">169</span><br><span class="line">10.75</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="comment">// 在此处补充你的代码</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">auto</span> Square = [] (<span class="keyword">double</span> a) &#123; <span class="keyword">return</span> a * a; &#125;;</span><br><span class="line">    <span class="keyword">auto</span> Inc = [] (<span class="keyword">double</span> a) &#123; <span class="keyword">return</span> a + <span class="number">1</span>; &#125;;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; combine&lt;<span class="keyword">decltype</span>(Square),<span class="keyword">decltype</span>(Inc),<span class="keyword">int</span>&gt;(Square,Inc)(<span class="number">3</span>) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; combine&lt;<span class="keyword">decltype</span>(Inc),<span class="keyword">decltype</span>(Square),<span class="keyword">double</span>&gt;(Inc,Square)(<span class="number">2.5</span>) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="解答-1"><a href="#解答-1" class="headerlink" title="解答"></a>解答</h3><p>​        比上一题多绕了一个弯。需要从已有的lambda表达式生成新的lambda表达式。当然，复合运算的过程中必须将自变量z代入，而不能只做函数代数（废话2333）。代码如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="comment">// 在此处补充你的代码</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;functional&gt;</span></span></span><br><span class="line"><span class="keyword">template</span>&lt;<span class="class"><span class="keyword">class</span> <span class="title">T1</span>,<span class="title">class</span> <span class="title">T2</span>,<span class="title">class</span> <span class="title">T3</span>&gt;</span></span><br><span class="line"><span class="class"><span class="title">function</span>&lt;T3(T3)&gt; <span class="title">combine</span>(<span class="title">T1</span> <span class="title">x</span>,<span class="title">T2</span> <span class="title">y</span>)&#123;</span></span><br><span class="line">    <span class="keyword">return</span> [=](T3 z)&#123;</span><br><span class="line">        T3 xx = x(z);</span><br><span class="line">        T3 yy = y(z);</span><br><span class="line">        <span class="keyword">return</span> x(xx+yy);</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//end</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">auto</span> Square = [] (<span class="keyword">double</span> a) &#123; <span class="keyword">return</span> a * a; &#125;;</span><br><span class="line">    <span class="keyword">auto</span> Inc = [] (<span class="keyword">double</span> a) &#123; <span class="keyword">return</span> a + <span class="number">1</span>; &#125;;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; combine&lt;<span class="keyword">decltype</span>(Square),<span class="keyword">decltype</span>(Inc),<span class="keyword">int</span>&gt;(Square,Inc)(<span class="number">3</span>) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; combine&lt;<span class="keyword">decltype</span>(Inc),<span class="keyword">decltype</span>(Square),<span class="keyword">double</span>&gt;(Inc,Square)(<span class="number">2.5</span>) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
 
       
 
@@ -204,7 +242,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">日常</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">不要停下来啊</a>
         		</li>
       		
 		</ul>
@@ -260,7 +298,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://allen-yolk.github.io/2020/03/04/Surprise/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://allen-yolk.github.io/2020/04/01/%E9%AB%98%E9%98%B6%E5%87%BD%E6%95%B0F-x/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -274,9 +312,18 @@
   
 <nav id="article-nav">
   
+    <a href="/2020/04/06/%E9%AD%94%E5%85%BD%E4%B8%96%E7%95%8C%EF%BC%88%E4%B8%89%EF%BC%89%E5%BC%80%E6%88%98/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          魔兽世界三（开战）
+        
+      </div>
+    </a>
   
-    <a href="/2020/03/02/The-bucket-list/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">The bucket list</div>
+  
+    <a href="/2020/03/10/%E6%9C%80%E7%9F%AD%E8%B7%AF/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">最短路</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -303,7 +350,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#高阶函数F-x"><span class="toc-number">1.</span> <span class="toc-text">高阶函数F(x)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#题目描述"><span class="toc-number">1.1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解答"><span class="toc-number">1.2.</span> <span class="toc-text">解答</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#高阶函数Combine"><span class="toc-number">2.</span> <span class="toc-text">高阶函数Combine</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#题目描述-1"><span class="toc-number">2.1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解答-1"><span class="toc-number">2.2.</span> <span class="toc-text">解答</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
