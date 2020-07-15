@@ -16,7 +16,7 @@
 <meta property="og:description" content="Key words: 递归，分形 From：程设">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-04-08T10:01:19.000Z">
-<meta property="article:modified_time" content="2020-04-17T15:15:59.078Z">
+<meta property="article:modified_time" content="2020-06-19T03:25:24.257Z">
 <meta property="article:author" content="Allen Yolk">
 <meta property="article:tag" content="不要停下来啊">
 <meta name="twitter:card" content="summary">
@@ -67,6 +67,8 @@
 				<li><a href="/tags/%E4%B8%8D%E8%A6%81%E5%81%9C%E4%B8%8B%E6%9D%A5%E5%95%8A/">Problems/不要停下来啊</a></li>
 	        
 				<li><a href="/tags/%E6%97%A5%E5%B8%B8/">Daily/日常</a></li>
+	        
+				<li><a href="/tags/%E6%8A%80%E6%9C%AF%E6%9D%82%E8%B0%88/">Techniques/技术杂谈</a></li>
 	        
 				<li><a href="/archives/index.html">Archives/所有文章</a></li>
 	        
@@ -128,6 +130,8 @@
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -142,15 +146,17 @@
 				<ul style="width: 70%">
 				
 				
-					<li style="width: 20%"><a href="/">Homepage/主页</a></li>
+					<li style="width: 16.666666666666668%"><a href="/">Homepage/主页</a></li>
 		        
-					<li style="width: 20%"><a href="/tags/%E8%BF%B7%E6%83%91%E8%A1%8C%E4%B8%BA/">Confusing Behaviors/迷惑行为</a></li>
+					<li style="width: 16.666666666666668%"><a href="/tags/%E8%BF%B7%E6%83%91%E8%A1%8C%E4%B8%BA/">Confusing Behaviors/迷惑行为</a></li>
 		        
-					<li style="width: 20%"><a href="/tags/%E4%B8%8D%E8%A6%81%E5%81%9C%E4%B8%8B%E6%9D%A5%E5%95%8A/">Problems/不要停下来啊</a></li>
+					<li style="width: 16.666666666666668%"><a href="/tags/%E4%B8%8D%E8%A6%81%E5%81%9C%E4%B8%8B%E6%9D%A5%E5%95%8A/">Problems/不要停下来啊</a></li>
 		        
-					<li style="width: 20%"><a href="/tags/%E6%97%A5%E5%B8%B8/">Daily/日常</a></li>
+					<li style="width: 16.666666666666668%"><a href="/tags/%E6%97%A5%E5%B8%B8/">Daily/日常</a></li>
 		        
-					<li style="width: 20%"><a href="/archives/index.html">Archives/所有文章</a></li>
+					<li style="width: 16.666666666666668%"><a href="/tags/%E6%8A%80%E6%9C%AF%E6%9D%82%E8%B0%88/">Techniques/技术杂谈</a></li>
+		        
+					<li style="width: 16.666666666666668%"><a href="/archives/index.html">Archives/所有文章</a></li>
 		        
 				</ul>
 			</nav>
@@ -218,7 +224,7 @@
 <p>​        代码如下：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stack&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iomanip&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">string</span> inputS;</span><br><span class="line"><span class="built_in">string</span> s;</span><br><span class="line"><span class="keyword">int</span> beg; <span class="comment">//"read pointer"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//declare teh functions in advance</span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">expression</span><span class="params">()</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">item</span><span class="params">()</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">Factor</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">expression</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">bool</span> e = item(); <span class="comment">//read an item</span></span><br><span class="line">    <span class="keyword">while</span>(<span class="literal">true</span>)&#123;</span><br><span class="line">        <span class="keyword">char</span> op = s[beg];</span><br><span class="line">        <span class="keyword">if</span>(op==<span class="string">'&amp;'</span>)&#123;</span><br><span class="line">            beg++; <span class="comment">//move the read pointer</span></span><br><span class="line">            e = e&amp;item();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(op==<span class="string">'|'</span>)&#123;</span><br><span class="line">            beg++;</span><br><span class="line">            e = e|item();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> e;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">item</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> cntNot=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(s[beg]==<span class="string">'!'</span>)&#123; <span class="comment">//read '!'</span></span><br><span class="line">        cntNot++;</span><br><span class="line">        beg++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">bool</span> e = Factor();</span><br><span class="line">    <span class="keyword">if</span>(cntNot%<span class="number">2</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> !e;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> e;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">Factor</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">bool</span> e=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span>(s[beg]==<span class="string">'('</span>)&#123;</span><br><span class="line">        beg++;</span><br><span class="line">        e = expression();</span><br><span class="line">        beg++; <span class="comment">//deal with the parentheses</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        e = (s[beg]==<span class="string">'V'</span>)?<span class="number">1</span>:<span class="number">0</span>;</span><br><span class="line">        beg++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> e;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> time=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(getline(<span class="built_in">cin</span>,inputS))&#123;</span><br><span class="line">        <span class="keyword">int</span> i=<span class="number">0</span>; s=<span class="string">""</span>; beg=<span class="number">0</span>;</span><br><span class="line">        <span class="comment">//delete the spaces</span></span><br><span class="line">        <span class="keyword">while</span>(i&lt;inputS.length())&#123;</span><br><span class="line">            <span class="keyword">if</span>(inputS[i]!=<span class="string">' '</span>)&#123;</span><br><span class="line">                s += inputS[i];</span><br><span class="line">            &#125;</span><br><span class="line">            ++i;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="string">"Expression "</span>&lt;&lt;time&lt;&lt;<span class="string">": "</span>&lt;&lt;((expression())?(<span class="string">"V"</span>):(<span class="string">"F"</span>))&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        time++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="B：Boolean-Expressions"><a href="#B：Boolean-Expressions" class="headerlink" title="B：Boolean Expressions"></a>B：Boolean Expressions</h2><h3 id="题目描述-1"><a href="#题目描述-1" class="headerlink" title="题目描述"></a>题目描述</h3><p>​        在计算机上看到文件系统的结构通常很有用。Microsoft Windows上面的”explorer”程序就是这样的一个例子。但是在有图形界面之前，没有图形化的表示方法的，那时候最好的方式是把目录和文件的结构显示成一个”图”的样子，而且使用缩排的形式来表示目录的结构。比如：</p>
+<h2 id="B：文件图"><a href="#B：文件图" class="headerlink" title="B：文件图"></a>B：文件图</h2><h3 id="题目描述-1"><a href="#题目描述-1" class="headerlink" title="题目描述"></a>题目描述</h3><p>​        在计算机上看到文件系统的结构通常很有用。Microsoft Windows上面的”explorer”程序就是这样的一个例子。但是在有图形界面之前，没有图形化的表示方法的，那时候最好的方式是把目录和文件的结构显示成一个”图”的样子，而且使用缩排的形式来表示目录的结构。比如：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">ROOT</span><br><span class="line">|     dir1</span><br><span class="line">|     file1</span><br><span class="line">|     file2</span><br><span class="line">|     file3</span><br><span class="line">|     dir2</span><br><span class="line">|     dir3</span><br><span class="line">|     file1</span><br><span class="line">file1</span><br><span class="line">file2</span><br></pre></td></tr></table></figure>
 
 <p>​        这个图说明：ROOT目录包括三个子目录和两个文件。第一个子目录包含3个文件，第二个子目录是空的，第三个子目录包含一个文件。</p>
@@ -226,8 +232,6 @@
 <p>​        你的任务是写一个程序读取一些测试数据。每组测试数据表示一个计算机的文件结构。每组测试数据以’*’结尾，而所有合理的输入数据以’#’结尾。一组测试数据包括一些文件和目录的名字（虽然在输入中我们没有给出，但是我们总假设ROOT目录是最外层的目录）。在输入中,以’]’表示一个目录的内容的结束。目录名字的第一个字母是’d’，文件名字的第一个字母是’f’。文件名可能有扩展名也可能没有（比如fmyfile.dat和fmyfile）。文件和目录的名字中都不包括空格,长度都不超过30。一个目录下的子目录个数和文件个数之和不超过30。</p>
 <p>​        例如，</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">file1</span><br><span class="line">file2</span><br><span class="line">dir3</span><br><span class="line">dir2</span><br><span class="line">file1</span><br><span class="line">file2</span><br><span class="line">]</span><br><span class="line">]</span><br><span class="line">file4</span><br><span class="line">dir1</span><br><span class="line">]</span><br><span class="line">file3</span><br><span class="line">*</span><br><span class="line">file2</span><br><span class="line">file1</span><br><span class="line">*</span><br><span class="line">#</span><br></pre></td></tr></table></figure>
-
-
 
 <p><strong>输出</strong></p>
 <p>​        在显示一个目录中内容的时候，先显示其中的子目录（如果有的话），然后再显示文件（如果有的话）。文件要求按照名字的字母表的顺序显示（目录不用按照名字的字母表顺序显示，只需要按照目录出现的先后显示）。对每一组测试数据，我们要先输出”DATA SET x:”，这里x是测试数据的编号（从1开始）。在两组测试数据之间要输出一个空行来隔开。</p>
@@ -381,7 +385,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#A：Boolean-Expressions"><span class="toc-number">1.</span> <span class="toc-text">A：Boolean Expressions</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#题目描述"><span class="toc-number">1.1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解答"><span class="toc-number">1.2.</span> <span class="toc-text">解答</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#B：Boolean-Expressions"><span class="toc-number">2.</span> <span class="toc-text">B：Boolean Expressions</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#题目描述-1"><span class="toc-number">2.1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解答-1"><span class="toc-number">2.2.</span> <span class="toc-text">解答</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#C：The-Sierpinski-Fractal"><span class="toc-number">3.</span> <span class="toc-text">C：The Sierpinski Fractal</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#题目描述-2"><span class="toc-number">3.1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解答-2"><span class="toc-number">3.2.</span> <span class="toc-text">解答</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#A：Boolean-Expressions"><span class="toc-number">1.</span> <span class="toc-text">A：Boolean Expressions</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#题目描述"><span class="toc-number">1.1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解答"><span class="toc-number">1.2.</span> <span class="toc-text">解答</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#B：文件图"><span class="toc-number">2.</span> <span class="toc-text">B：文件图</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#题目描述-1"><span class="toc-number">2.1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解答-1"><span class="toc-number">2.2.</span> <span class="toc-text">解答</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#C：The-Sierpinski-Fractal"><span class="toc-number">3.</span> <span class="toc-text">C：The Sierpinski Fractal</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#题目描述-2"><span class="toc-number">3.1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解答-2"><span class="toc-number">3.2.</span> <span class="toc-text">解答</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -534,11 +538,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">迷惑行为</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">日常</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">迷惑行为</a>
+                <a href="javascript:void(0)" class="js-tag color5">技术杂谈</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -609,7 +617,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">Hyf 蒟蒻 PKU 信息科学技术学院 计算机系 在读</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">Hyf PKU 信息科学技术学院 计算机系 在读</div>
   	  	
     	</section>
     

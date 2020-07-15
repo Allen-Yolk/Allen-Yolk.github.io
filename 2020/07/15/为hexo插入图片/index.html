@@ -6,15 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2020 | Allen-Yolk滴博客</title>
+  <title>为hexo插入图片 | Allen-Yolk滴博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Allen-Yolk滴博客">
-<meta property="og:url" content="http://yoursite.com/archives/2020/index.html">
+  <meta name="description" content="​        自从这个小博客诞生以来，图片插入的问题始终没有解决。之前我一直用各种方法和“话术”避免需要插入图片的情况，但最近渐渐意识到了图片在文档中的重要地位。 ​        于是，实验开始！">
+<meta property="og:type" content="article">
+<meta property="og:title" content="为hexo插入图片">
+<meta property="og:url" content="http://yoursite.com/2020/07/15/%E4%B8%BAhexo%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/index.html">
 <meta property="og:site_name" content="Allen-Yolk滴博客">
+<meta property="og:description" content="​        自从这个小博客诞生以来，图片插入的问题始终没有解决。之前我一直用各种方法和“话术”避免需要插入图片的情况，但最近渐渐意识到了图片在文档中的重要地位。 ​        于是，实验开始！">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/2020/07/15/%E4%B8%BAhexo%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/example.jpg">
+<meta property="og:image" content="http://yoursite.com/2020/07/15/%E4%B8%BAhexo%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/example.jpg">
+<meta property="article:published_time" content="2020-07-15T11:34:53.000Z">
+<meta property="article:modified_time" content="2020-07-15T11:50:36.906Z">
 <meta property="article:author" content="Allen Yolk">
+<meta property="article:tag" content="技术杂谈">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/07/15/%E4%B8%BAhexo%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/example.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Allen-Yolk滴博客" type="application/atom+xml">
   
@@ -167,35 +175,68 @@
           </div>
           <div id="js-content" class="content-ll">
             
-  
-  
+<article id="post-为hexo插入图片" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/15/%E4%B8%BAhexo%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/" class="archive-article-date">
-  	<time datetime="2020-07-15T11:34:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-15</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/15/%E4%B8%BAhexo%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/">为hexo插入图片</a>
+    <h1 class="article-title" itemprop="name">
+      为hexo插入图片
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2020/07/15/%E4%B8%BAhexo%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/" class="archive-article-date">
+  	<time datetime="2020-07-15T11:34:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-15</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>​        自从这个小博客诞生以来，图片插入的问题始终没有解决。之前我一直用各种方法和“话术”避免需要插入图片的情况，但最近渐渐意识到了图片在文档中的重要地位。</p>
+<p>​        于是，实验开始！</p>
+<a id="more"></a>
+
+<h2 id="本地图片插入"><a href="#本地图片插入" class="headerlink" title="本地图片插入"></a>本地图片插入</h2><p>​        Hexo图片插入方法分为两种：本地插入和网络引用。这里介绍本地插入的方法。</p>
+<h3 id="1-配置文件的修改"><a href="#1-配置文件的修改" class="headerlink" title="1. 配置文件的修改"></a>1. 配置文件的修改</h3><p>​        打开 <strong>hexo安装目录下的_config.xml</strong> 文件，用 ctrl+f 找到 <code>post_asset_folder</code>属性，将其值修改为 <code>true</code>。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">post_asset_folder: true</span><br></pre></td></tr></table></figure>
+
+<p>​        <code>post_asset_folder</code> 设定为真后，资源文件管理功能开启。此后，每次使用命令<code>hexo new &lt;title&gt;</code> 创建新的博客文章时，在文章的统一目录下会同时生成一个同名文件夹。将所需的图片等资源放入此文件夹中，便可以在文章中引用。</p>
+<h3 id="2-插件的安装"><a href="#2-插件的安装" class="headerlink" title="2. 插件的安装"></a>2. 插件的安装</h3><p>​        在 hexo 安装目录下执行命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install https:&#x2F;&#x2F;github.com&#x2F;CodeFalling&#x2F;hexo-asset-image --save</span><br></pre></td></tr></table></figure>
+
+<p>​        以安装图片显示插件 (version: 0.0.5)。注意，在 windows 或 linux 环境下可能会报出警告：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.11 (node_modules\nunjucks\node_modules\fsevents):</span><br><span class="line">npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.11: wanted &#123;&quot;os&quot;:&quot;darwin&quot;,&quot;arch&quot;:&quot;any&quot;&#125; (current: &#123;&quot;os&quot;:&quot;win32&quot;,&quot;arch&quot;:&quot;x64&quot;&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>​        在 mac 下，需要 fsevents，但在 windows 和 linux 下是不需要的。因此，直接无视这一 warning。</p>
+<p>​        注意，不要使用以下命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-asset-image --save</span><br></pre></td></tr></table></figure>
+
+<p>​         这一命令安装的插件版本为1.0.0，实测不能在博客里正常显示图片。</p>
+<h3 id="3-插入图片"><a href="#3-插入图片" class="headerlink" title="3. 插入图片"></a>3. 插入图片</h3><p>​        先将需要插入的图片放在同名文件夹中，再按照 markdown 语法来插入图片即可。</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">Alt text</span>](<span class="link">path</span>)</span><br></pre></td></tr></table></figure>
+
+<p>​        注意，这里的路径格式为：<code>同名文件夹/文件</code>。例如，</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">popTeamEpic</span>](<span class="link">为hexo插入图片/example.jpg</span>)</span><br></pre></td></tr></table></figure>
+
+<p>​        效果如下：<img src="/2020/07/15/%E4%B8%BAhexo%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/example.jpg" alt="popTeamEpic"></p>
+<h2 id="设置图片大小"><a href="#设置图片大小" class="headerlink" title="设置图片大小"></a>设置图片大小</h2><p>​        hexo里插入的图片会按照自身大小铺满，故需要q嵌入 html 的 img 标签来实现缩放、居中。</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">align</span>=<span class="string">center</span>&gt;</span></span><span class="xml"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"为hexo插入图片/example.jpg"</span> <span class="attr">width</span>=<span class="string">"50%"</span> <span class="attr">height</span>=<span class="string">"50%"</span> <span class="attr">align</span>=<span class="string">center</span> &gt;</span></span><span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<p>​        效果如下：</p>
+<div align="center"><img src="/2020/07/15/%E4%B8%BAhexo%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/example.jpg" width="50%" height="50%" align="center"></div>
+
+<p>其中，<code>&lt;div align=center&gt;...&lt;/div&gt;</code>是用来设置居中的。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -207,364 +248,118 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://allen-yolk.github.io/2020/07/15/%E4%B8%BAhexo%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/06/18/%E7%A8%8B%E8%AE%BE%EF%BC%88%E7%AE%97%E6%B3%95%E9%83%A8%E5%88%86%EF%BC%89-%E4%B8%8A%E6%9C%BA%E7%BB%83%E4%B9%A0%E6%B1%87%E6%80%BB/" class="archive-article-date">
-  	<time datetime="2020-06-18T06:52:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-18</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/06/18/%E7%A8%8B%E8%AE%BE%EF%BC%88%E7%AE%97%E6%B3%95%E9%83%A8%E5%88%86%EF%BC%89-%E4%B8%8A%E6%9C%BA%E7%BB%83%E4%B9%A0%E6%B1%87%E6%80%BB/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">程设（算法部分）-上机练习汇总</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/06/18/%E7%A8%8B%E8%AE%BE%EF%BC%88%E7%AE%97%E6%B3%95%E9%83%A8%E5%88%86%EF%BC%89-%E4%B8%8A%E6%9C%BA%E7%BB%83%E4%B9%A0%E6%B1%87%E6%80%BB/">程设（算法部分）-上机练习汇总</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">不要停下来啊</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#本地图片插入"><span class="toc-number">1.</span> <span class="toc-text">本地图片插入</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-配置文件的修改"><span class="toc-number">1.1.</span> <span class="toc-text">1. 配置文件的修改</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-插件的安装"><span class="toc-number">1.2.</span> <span class="toc-text">2. 插件的安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-插入图片"><span class="toc-number">1.3.</span> <span class="toc-text">3. 插入图片</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#设置图片大小"><span class="toc-number">2.</span> <span class="toc-text">设置图片大小</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/06/12/%E7%A8%8B%E8%AE%BE%EF%BC%88%E7%AE%97%E6%B3%95%E9%83%A8%E5%88%86%EF%BC%89-%E6%B7%B1%E6%90%9C%E5%B9%BF%E6%90%9C/" class="archive-article-date">
-  	<time datetime="2020-06-12T08:44:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-12</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/06/12/%E7%A8%8B%E8%AE%BE%EF%BC%88%E7%AE%97%E6%B3%95%E9%83%A8%E5%88%86%EF%BC%89-%E6%B7%B1%E6%90%9C%E5%B9%BF%E6%90%9C/">程设（算法部分）-深搜广搜</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">不要停下来啊</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/29/%E7%A8%8B%E8%AE%BE%EF%BC%88%E7%AE%97%E6%B3%95%E9%83%A8%E5%88%86%EF%BC%89-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" class="archive-article-date">
-  	<time datetime="2020-04-29T08:30:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/29/%E7%A8%8B%E8%AE%BE%EF%BC%88%E7%AE%97%E6%B3%95%E9%83%A8%E5%88%86%EF%BC%89-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">程设（算法部分）-动态规划</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">不要停下来啊</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/22/%E7%A8%8B%E8%AE%BE%EF%BC%88%E7%AE%97%E6%B3%95%E9%83%A8%E5%88%86%EF%BC%89-%E5%88%86%E6%B2%BB/" class="archive-article-date">
-  	<time datetime="2020-04-22T08:09:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/22/%E7%A8%8B%E8%AE%BE%EF%BC%88%E7%AE%97%E6%B3%95%E9%83%A8%E5%88%86%EF%BC%89-%E5%88%86%E6%B2%BB/">程设（算法部分）-分治</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">不要停下来啊</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/17/%E7%A8%8B%E8%AE%BE%EF%BC%88%E7%AE%97%E6%B3%95%E9%83%A8%E5%88%86%EF%BC%89-%E4%BA%8C%E5%88%86/" class="archive-article-date">
-  	<time datetime="2020-04-17T15:15:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/17/%E7%A8%8B%E8%AE%BE%EF%BC%88%E7%AE%97%E6%B3%95%E9%83%A8%E5%88%86%EF%BC%89-%E4%BA%8C%E5%88%86/">程设（算法部分） 二分</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">不要停下来啊</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/08/%E7%A8%8B%E8%AE%BE%EF%BC%88%E7%AE%97%E6%B3%95%E9%83%A8%E5%88%86%EF%BC%89-%E9%80%92%E5%BD%92/" class="archive-article-date">
-  	<time datetime="2020-04-08T10:01:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/08/%E7%A8%8B%E8%AE%BE%EF%BC%88%E7%AE%97%E6%B3%95%E9%83%A8%E5%88%86%EF%BC%89-%E9%80%92%E5%BD%92/">程设（算法部分） 递归</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">不要停下来啊</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/06/%E7%A8%8B%E8%AE%BE%EF%BC%88%E7%AE%97%E6%B3%95%E9%83%A8%E5%88%86%EF%BC%89-%E6%9E%9A%E4%B8%BE/" class="archive-article-date">
-  	<time datetime="2020-04-06T11:09:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/06/%E7%A8%8B%E8%AE%BE%EF%BC%88%E7%AE%97%E6%B3%95%E9%83%A8%E5%88%86%EF%BC%89-%E6%9E%9A%E4%B8%BE/">程设（算法部分） 枚举</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">不要停下来啊</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/06/%E9%AD%94%E5%85%BD%E4%B8%96%E7%95%8C%E7%BB%88%E6%9E%81%E7%89%88/" class="archive-article-date">
-  	<time datetime="2020-04-06T10:40:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/06/%E9%AD%94%E5%85%BD%E4%B8%96%E7%95%8C%E7%BB%88%E6%9E%81%E7%89%88/">魔兽世界终极版</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">不要停下来啊</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/06/%E9%AD%94%E5%85%BD%E4%B8%96%E7%95%8C%EF%BC%88%E4%B8%89%EF%BC%89%E5%BC%80%E6%88%98/" class="archive-article-date">
-  	<time datetime="2020-04-06T10:05:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/06/%E9%AD%94%E5%85%BD%E4%B8%96%E7%95%8C%EF%BC%88%E4%B8%89%EF%BC%89%E5%BC%80%E6%88%98/">魔兽世界三（开战）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">不要停下来啊</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2020/page/2/">2</a><a class="extend next" rel="next" href="/archives/2020/page/2/">Next &amp;raquo;</a>
-    </nav>
   
 
 
@@ -592,8 +387,8 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
