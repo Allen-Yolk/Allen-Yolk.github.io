@@ -6,15 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Allen-Yolk滴博客</title>
+  <title>Matrix Operations | Allen-Yolk滴博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Allen-Yolk滴博客">
-<meta property="og:url" content="http://yoursite.com/page/2/index.html">
+  <meta name="description" content="​    After studying Advanced Algebra for a whole year, we finally said goodbye with it this week. As a supplement to the learning of theories, let’s dig into the implementation of these basic algorith">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Matrix Operations">
+<meta property="og:url" content="http://yoursite.com/2020/09/18/Matrix-Operations/index.html">
 <meta property="og:site_name" content="Allen-Yolk滴博客">
+<meta property="og:description" content="​    After studying Advanced Algebra for a whole year, we finally said goodbye with it this week. As a supplement to the learning of theories, let’s dig into the implementation of these basic algorith">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/2020/09/18/Matrix-Operations/LU.png">
+<meta property="og:image" content="http://yoursite.com/2020/09/18/Matrix-Operations/LUP.png">
+<meta property="og:image" content="http://yoursite.com/2020/09/18/Matrix-Operations/eg.png">
+<meta property="article:published_time" content="2020-09-18T06:38:10.000Z">
+<meta property="article:modified_time" content="2020-09-19T08:09:31.068Z">
 <meta property="article:author" content="Allen Yolk">
+<meta property="article:tag" content="迷惑行为">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/09/18/Matrix-Operations/LU.png">
   
     <link rel="alternative" href="/atom.xml" title="Allen-Yolk滴博客" type="application/atom+xml">
   
@@ -167,655 +176,360 @@
           </div>
           <div id="js-content" class="content-ll">
             
-  
-    <article id="post-魔兽世界终极版" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+<article id="post-Matrix-Operations" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/06/%E9%AD%94%E5%85%BD%E4%B8%96%E7%95%8C%E7%BB%88%E6%9E%81%E7%89%88/">魔兽世界终极版</a>
+    <h1 class="article-title" itemprop="name">
+      Matrix Operations
     </h1>
   
 
         
-        <a href="/2020/04/06/%E9%AD%94%E5%85%BD%E4%B8%96%E7%95%8C%E7%BB%88%E6%9E%81%E7%89%88/" class="archive-article-date">
-  	<time datetime="2020-04-06T10:40:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-06</time>
+        <a href="/2020/09/18/Matrix-Operations/" class="archive-article-date">
+  	<time datetime="2020-09-18T06:38:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-18</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Key words: 面向对象，大作业，C++</p>
-<p>From: 程设</p>
-<p>​        趁着清明假期终于肝完魔兽大作业了。感觉终极版只需要在第三版做些许的改动，不像当时做第三版时那样有“质的飞跃”。所以，将会把第三版和最终版都贴出来喽。</p>
-<p>​        en？第一、第二版？这两版对后面的版本有什么影响吗（嚣张</p>
-<p>​        [这里是终极版！]</p>
-        
-          <a class="article-more-a" href="/2020/04/06/%E9%AD%94%E5%85%BD%E4%B8%96%E7%95%8C%E7%BB%88%E6%9E%81%E7%89%88/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">不要停下来啊</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/06/%E9%AD%94%E5%85%BD%E4%B8%96%E7%95%8C%E7%BB%88%E6%9E%81%E7%89%88/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-魔兽世界（三）开战" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/06/%E9%AD%94%E5%85%BD%E4%B8%96%E7%95%8C%EF%BC%88%E4%B8%89%EF%BC%89%E5%BC%80%E6%88%98/">魔兽世界三（开战）</a>
-    </h1>
-  
-
-        
-        <a href="/2020/04/06/%E9%AD%94%E5%85%BD%E4%B8%96%E7%95%8C%EF%BC%88%E4%B8%89%EF%BC%89%E5%BC%80%E6%88%98/" class="archive-article-date">
-  	<time datetime="2020-04-06T10:05:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Key words: 面向对象，大作业，C++</p>
-<p>From: 程设</p>
-<p>​        趁着清明假期终于肝完魔兽大作业了。感觉终极版只需要在第三版做些许的改动，不像当时做第三版时那样有“质的飞跃”。所以，将会把第三版和最终版都贴出来喽。</p>
-<p>​        en？第一、第二版？这两版对后面的版本有什么影响吗（嚣张</p>
-<p>​        [这里是第三版！]</p>
-        
-          <a class="article-more-a" href="/2020/04/06/%E9%AD%94%E5%85%BD%E4%B8%96%E7%95%8C%EF%BC%88%E4%B8%89%EF%BC%89%E5%BC%80%E6%88%98/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">不要停下来啊</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/06/%E9%AD%94%E5%85%BD%E4%B8%96%E7%95%8C%EF%BC%88%E4%B8%89%EF%BC%89%E5%BC%80%E6%88%98/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-高阶函数F-x" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/01/%E9%AB%98%E9%98%B6%E5%87%BD%E6%95%B0F-x/">高阶函数F(x)</a>
-    </h1>
-  
-
-        
-        <a href="/2020/04/01/%E9%AB%98%E9%98%B6%E5%87%BD%E6%95%B0F-x/" class="archive-article-date">
-  	<time datetime="2020-04-01T08:13:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Key words: C++11，lambda表达式</p>
-<p>From: 程设</p>
-        
-          <a class="article-more-a" href="/2020/04/01/%E9%AB%98%E9%98%B6%E5%87%BD%E6%95%B0F-x/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">不要停下来啊</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/01/%E9%AB%98%E9%98%B6%E5%87%BD%E6%95%B0F-x/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-最短路" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/10/%E6%9C%80%E7%9F%AD%E8%B7%AF/">最短路</a>
-    </h1>
-  
-
-        
-        <a href="/2020/03/10/%E6%9C%80%E7%9F%AD%E8%B7%AF/" class="archive-article-date">
-  	<time datetime="2020-03-09T16:04:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Key words: 最短路径，Dijkstra算法</p>
-<p>From：人工智能引论（poj）</p>
-        
-          <a class="article-more-a" href="/2020/03/10/%E6%9C%80%E7%9F%AD%E8%B7%AF/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">不要停下来啊</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/03/10/%E6%9C%80%E7%9F%AD%E8%B7%AF/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Sudoku" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/05/Sudoku/">Sudoku</a>
-    </h1>
-  
-
-        
-        <a href="/2020/03/05/Sudoku/" class="archive-article-date">
-  	<time datetime="2020-03-05T05:45:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-05</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Key words: 深度优先搜索</p>
-<p>From：人工智能引论（poj）</p>
-        
-          <a class="article-more-a" href="/2020/03/05/Sudoku/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">不要停下来啊</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/03/05/Sudoku/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-奇怪的类复制" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/02/24/%E5%A5%87%E6%80%AA%E7%9A%84%E7%B1%BB%E5%A4%8D%E5%88%B6/">奇怪的类复制</a>
-    </h1>
-  
-
-        
-        <a href="/2020/02/24/%E5%A5%87%E6%80%AA%E7%9A%84%E7%B1%BB%E5%A4%8D%E5%88%B6/" class="archive-article-date">
-  	<time datetime="2020-02-24T15:57:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-24</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Key words: 类与对象，复制构造函数</p>
-<p>From: 程设</p>
-        
-          <a class="article-more-a" href="/2020/02/24/%E5%A5%87%E6%80%AA%E7%9A%84%E7%B1%BB%E5%A4%8D%E5%88%B6/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">不要停下来啊</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/02/24/%E5%A5%87%E6%80%AA%E7%9A%84%E7%B1%BB%E5%A4%8D%E5%88%B6/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-ReadMe-Problems" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/02/24/ReadMe-Problems/">ReadMe-Problems</a>
-    </h1>
-  
-
-        
-        <a href="/2020/02/24/ReadMe-Problems/" class="archive-article-date">
-  	<time datetime="2020-02-23T16:43:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-24</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>​    新的学期，新的系列！记录一些好玩的题目吧。</p>
-<p>​    所以啊，不要停下来啊（指自己）！</p>
-        
-          <a class="article-more-a" href="/2020/02/24/ReadMe-Problems/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">不要停下来啊</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/02/24/ReadMe-Problems/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Elementary-Graph-Algorithms" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/02/07/Elementary-Graph-Algorithms/">Elementary Graph Algorithms</a>
-    </h1>
-  
-
-        
-        <a href="/2020/02/07/Elementary-Graph-Algorithms/" class="archive-article-date">
-  	<time datetime="2020-02-07T08:42:08.365Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>​    This chapter will demonstrate ways to represent a graph and do searching in a graph. Before reading this passage, please get familiar with the terms and definitions in the field of graph theory.</p>
-<p>​    All the contents in this chapter are based on <em>Introduction to Algorithms</em>, so the implementation of depth-first search and breadth-first search are quite complicated in order to show the whole process of searching in a graph. Actually, the code can be simplified a lot according to the real problem. </p>
-        
-          <a class="article-more-a" href="/2020/02/07/Elementary-Graph-Algorithms/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">迷惑行为</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/02/07/Elementary-Graph-Algorithms/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Number-Theoretic-Algorithms" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/02/03/Number-Theoretic-Algorithms/">Number-Theoretic Algorithms</a>
-    </h1>
-  
-
-        
-        <a href="/2020/02/03/Number-Theoretic-Algorithms/" class="archive-article-date">
-  	<time datetime="2020-02-03T12:18:06.358Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>​    Number theory was once viewed as a beautiful but largely useless subject in mathematics. However, number-theoretic algorithms are widely used today due in part to the invention of cryptographic schemes based on large prime numbers.</p>
+        <p>​    After studying <em>Advanced Algebra</em> for a whole year, we finally said goodbye with it this week. As a supplement to the learning of theories, let’s dig into the implementation of these basic algorithms or operations on the computer. </p>
+<p>​    I omit all the rudimentary knowledge about matrix and linear algebra here for the sake of concision. You’re recommended to have some idea about them!</p>
+<a id="more"></a>
+<h2 id="Solving-Systems-of-Linear-Equations"><a href="#Solving-Systems-of-Linear-Equations" class="headerlink" title="Solving Systems of Linear Equations"></a>Solving Systems of Linear Equations</h2><p>​    The fundamental question in linear algebra is to solve a system of linear equations. In the form of matrix, the equations may be represented as:</p>
+<script type="math/tex; mode=display">
+\begin{align}
+
+\begin{pmatrix}
+    a_{11} & a_{12} & \dots & a_{1n} \newline
+    a_{21} & a_{22} & \dots & a_{2n} \newline
+    \vdots & \vdots & \ddots & \vdots \newline
+    a_{m1} & a_{m2} & \dots & a_{mn}
+\end{pmatrix}
+
+\left(
+\begin{matrix}
+    x_{1} \newline
+    x_{2} \newline
+    \vdots \newline
+    x_{n}
+\end{matrix}
+\right)
+&=
+\left(
+\begin{matrix}
+    b_{1} \newline
+    b_{2} \newline
+    \vdots \newline
+    b_{n}
+\end{matrix}
+\right)
+\end{align}</script><p>or, simply, $Ax=b$.</p>
+<p>​    <strong>Suppose $m=n$ and $A$ is nonsingular</strong>, we’re going to solve a system of $n$ equations with $n$ unknown elements, which will definitely has a <strong>unique solution</strong>.</p>
+<h3 id="Method-1-Compute-the-inverse"><a href="#Method-1-Compute-the-inverse" class="headerlink" title="Method 1. Compute the inverse"></a>Method 1. Compute the inverse</h3><p>​    Since $A$ is nonsingular, as we’ve assumed, we have</p>
+<script type="math/tex; mode=display">
+x = A^{-1}b</script><p>​    Unfortunately, the result is always not satisfactory. Here comes the question of <strong>numerical instability</strong>, which means the the round-off error triggered by the limited precision of floating-point representations may be accumulated and enormously amplified, leading to incorrect results. It’s conceivable that when computing $A^{-1}$ in a conventional approach, such problem will happen.</p>
+<p>​    So, we need to make some change.</p>
+<h3 id="Method-2-LUP-Decomposition"><a href="#Method-2-LUP-Decomposition" class="headerlink" title="Method 2. LUP Decomposition"></a>Method 2. LUP Decomposition</h3><p>​    Compared with the former method, using LUP decomposition can save our time and output a result with higher accuracy. Here is the main theorem.</p>
+<blockquote>
+<p><strong>Theorem 1.</strong> LUP Decomposition</p>
+<p>​    Suppose $A$ is a nonsingular square matrix, we have the following equation:</p>
+<script type="math/tex; mode=display">
+PA = LU</script><p>where </p>
+<ul>
+<li>L is a <strong>lower-triangular matrix, whose entries on the main diagonal are all 1;</strong></li>
+<li>U is an <strong>upper-triangular matrix</strong>;</li>
+<li>P is a <strong>permutation matrix</strong>: it has exactly one “1” entry each line, and all the other entries are “0”.</li>
+</ul>
 </blockquote>
-        
-          <a class="article-more-a" href="/2020/02/03/Number-Theoretic-Algorithms/#more">more >></a>
-        
+<p>​    Let’s demonstrate why the decomposition always exists, and how can we compute the decomposition. First, we’ll take a look at a simplified form.</p>
+<h4 id="1-Computing-an-LU-Decomposition"><a href="#1-Computing-an-LU-Decomposition" class="headerlink" title="1) Computing an LU Decomposition"></a>1) Computing an LU Decomposition</h4><p>​    We begin with the case that $P=I_{n}$. In this case, $A = LU$, so the process is called “LU decomposition”. </p>
+<p>​    The key to the decomposition is <strong>Gaussian elimination</strong>, which all of us have learned in the first several classes of linear algebra. Write $A$ in the following form:</p>
+<script type="math/tex; mode=display">
+A 
+= 
+\left(
+\begin{array}{cccc}
+a_{11} & w^{T} \newline
+v      & A'
+\end{array}
+\right)</script><p>where $A’$ has the shape $(n-1) \times(n-1)$, and both $v$ and $w$ are column vectors with the size $n-1$. Do elementary transformations on A in terms of blocks, and we can get</p>
+<script type="math/tex; mode=display">
+\begin{align}
+A 
+&= 
+\left(
+\begin{array}{cccc}
+1 & 0 \newline
+v/a_{11}      & I_{n-1}
+\end{array}
+\right)
+\left(
+\begin{array}{cccc}
+a_{11} & w^{T} \newline
+0      & A'-vw^{T}/a_{11}
+\end{array}
+\right)
+\end{align}</script><p>$A’-vw^{T}/a_{11}$ is called the <strong>Schur complement</strong> of A with respect to $a_{11}$. </p>
+<p>​    Since A is nonsingular, we know that $A’-vw^{T}/a_{11}$ is also nonsingular. Doing Gaussian elimination recursively, and assume that $A’-vw^{T}/a_{11}=L’U’$. Then, </p>
+<script type="math/tex; mode=display">
+\begin{align}
+A 
+&=
+\left(
+\begin{array}{cccc}
+1 & 0 \newline
+v/a_{11}      & I_{n-1}
+\end{array}
+\right)
+\left(
+\begin{array}{cccc}
+a_{11} & w^{T} \newline
+0      & A'-vw^{T}/a_{11}
+\end{array}
+\right)\newline
+&=
+\left(
+\begin{array}{cccc}
+1 & 0 \newline
+v/a_{11}      & I_{n-1}
+\end{array}
+\right)
+\left(
+\begin{array}{cccc}
+a_{11} & w^{T} \newline
+0      & L'U'
+\end{array}
+\right)\newline
+&=
+\left(
+\begin{array}{cccc}
+1 & 0 \newline
+v/a_{11}      & L'
+\end{array}
+\right)
+\left(
+\begin{array}{cccc}
+a_{11} & w^{T} \newline
+0      & U'
+\end{array}
+\right)\newline
+&=LU
+\end{align}</script><p>​    Therefore, the LU decomposition always exists. (The boundary case of the recursion is omitted.)</p>
+<p>​    An excerpt of Python code for LU decomposition is displayed below. It runs in time $\Theta(n^3)$</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">LUDecomposition</span><span class="params">(A)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    A: a n*n list</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    n = len(A)</span><br><span class="line">    U=[]</span><br><span class="line">    L=[]</span><br><span class="line">    <span class="comment">#create two zreo square matrix</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(n):</span><br><span class="line">        U.append([])</span><br><span class="line">        L.append([])</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(n):</span><br><span class="line">            U[i].append(<span class="number">0</span>)</span><br><span class="line">            L[i].append(<span class="number">0</span>)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(n):</span><br><span class="line">        U[i][i] = A[i][i]</span><br><span class="line">        L[i][i] = <span class="number">1</span></span><br><span class="line">        <span class="comment">#deal with the "upper line" and "leftmost column"</span></span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(i+<span class="number">1</span>,n): </span><br><span class="line">            L[j][i] = A[j][i]/A[i][i]</span><br><span class="line">            U[i][j] = A[i][j]</span><br><span class="line">        <span class="comment">#deal with the block A'</span></span><br><span class="line">        <span class="keyword">for</span> x <span class="keyword">in</span> range(i+<span class="number">1</span>,n): </span><br><span class="line">            <span class="keyword">for</span> y <span class="keyword">in</span> range(i+<span class="number">1</span>,n):</span><br><span class="line">                A[x][y] = A[x][y]-L[x][i]*U[i][y]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> L,U</span><br></pre></td></tr></table></figure>
+<div align="center"><img src="/2020/09/18/Matrix-Operations/LU.png"></div>
+
+<p>​    One important question is that <strong>if $a_{11}=0$, the method can’t work</strong>, for we have to divide $v$ by $a_{11}$. So, we introduce a permutation matrix $P$ to the process to avoid this dilemma.  </p>
+<h4 id="2-Computing-the-LUP-Decomposition"><a href="#2-Computing-the-LUP-Decomposition" class="headerlink" title="2) Computing the LUP Decomposition"></a>2) Computing the LUP Decomposition</h4><p>​    The mathematics behind LUP decomposition is exceedingly similar to that of the LU decomposition. Before we partition $A$ as done in LU decomposition, we <strong>move a nonzero element $a_{k1}$ from the <em>k</em>th row to the first row</strong>. We do this by <strong>multiplying a permutation matrix $P$ on the left side of $A$, resulting in the exchange of the first row and the <em>k</em>th row</strong>. In every iteration we consider multiplying a permutation matrix before decomposing the block.</p>
+<p>​    Here is a Python function that executes LUP decomposition. It also has a asymptotic running time of $\Theta(n^3)$.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">LUPDecomposition</span><span class="params">(A)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    A: a n*n list</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    n = len(A)</span><br><span class="line">    <span class="comment">#we use a vector to represent the matrix P</span></span><br><span class="line">    <span class="comment">#p[i]=j =&gt; the ith row of P contains a 1 in column j</span></span><br><span class="line">    p = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(n):</span><br><span class="line">        p.append(i)</span><br><span class="line">    </span><br><span class="line">    <span class="comment">#the main loop</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(n):</span><br><span class="line">        maxE = <span class="number">0</span> <span class="comment">#the max absolute value </span></span><br><span class="line">        maxEIndex = i <span class="comment">#the index of the max abs val</span></span><br><span class="line">        <span class="comment">#find the entry with the max abs val</span></span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(i,n):</span><br><span class="line">            <span class="keyword">if</span> abs(A[j][i])&gt;maxE:</span><br><span class="line">                maxE = abs(A[j][i])</span><br><span class="line">                maxEIndex = j</span><br><span class="line">        <span class="comment">#judge whether we have to exchange two rows</span></span><br><span class="line">        <span class="keyword">if</span> maxE==<span class="number">0</span>:</span><br><span class="line">            <span class="keyword">raise</span> Exception(<span class="string">"The matrix A is singular!"</span>)</span><br><span class="line">        <span class="comment">#always move the entry with the largest abs to the pivot position</span></span><br><span class="line">        p[i],p[maxEIndex] = p[maxEIndex],p[i]</span><br><span class="line">        <span class="comment">#exchange entries in A</span></span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(n):</span><br><span class="line">            A[i][j],A[maxEIndex][j] = A[maxEIndex][j],A[i][j]</span><br><span class="line">        <span class="comment">#the same process as LU decomposition</span></span><br><span class="line">        <span class="comment">#we do all the computation in A first</span></span><br><span class="line">        <span class="comment">#after the iteration, we divid A into L and U</span></span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(i+<span class="number">1</span>,n):</span><br><span class="line">            A[j][i] = A[j][i]/A[i][i]</span><br><span class="line">            <span class="keyword">for</span> k <span class="keyword">in</span> range(i+<span class="number">1</span>,n):</span><br><span class="line">                A[j][k] = A[j][k]-A[j][i]*A[i][k]</span><br><span class="line"></span><br><span class="line">    P=[]</span><br><span class="line">    L=[]</span><br><span class="line">    U=[]</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(n):</span><br><span class="line">        P.append([])</span><br><span class="line">        L.append([])</span><br><span class="line">        U.append([])</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(n):</span><br><span class="line">            P[i].append(<span class="number">0</span>)</span><br><span class="line">            L[i].append(<span class="number">0</span>)</span><br><span class="line">            U[i].append(<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment">#get P from p</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(n):</span><br><span class="line">        P[i][p[i]] = <span class="number">1</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">#get U and L form A</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(n):</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(n):</span><br><span class="line">            <span class="keyword">if</span> j==i:</span><br><span class="line">                L[i][j] = <span class="number">1</span></span><br><span class="line">                U[i][j] = A[i][j]</span><br><span class="line">            <span class="keyword">elif</span> j&lt;i:</span><br><span class="line">                L[i][j] = A[i][j]</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                U[i][j] = A[i][j]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> L,U,p</span><br></pre></td></tr></table></figure>
+<div align="center"><img src="/2020/09/18/Matrix-Operations/LUP.png"></div>
+
+<h4 id="3-Solve-the-System-of-Equations-Back-and-Forward-Substitution"><a href="#3-Solve-the-System-of-Equations-Back-and-Forward-Substitution" class="headerlink" title="3) Solve the System of Equations: Back and Forward Substitution"></a>3) Solve the System of Equations: Back and Forward Substitution</h4><p>​    After LUP decomposition, we get</p>
+<script type="math/tex; mode=display">
+\begin{align}
+Ax&=b \newline
+PAx&=Pb \newline
+LUx&=Pb
+\end{align}</script><p>​    As equation (13) shows, we are going to solve an <strong>lower-triangular system</strong> and a <strong>upper-triangular system</strong>:</p>
+<script type="math/tex; mode=display">
+\begin{align}
+Ly &= Pb \newline
+Ux &= y
+\end{align}</script><p>​    First, we use <strong>forward substitution</strong> to solve the lower triangular system (14). The equations may be rewritten as:</p>
+<script type="math/tex; mode=display">
+\begin{align}
+\left(
+\begin{array}{cccc}
+1 & \newline
+l_{21} & 1 \newline
+l_{31} & l_{32} & 1 \newline
+\vdots & \vdots & \vdots & \ddots \newline
+l_{n1} & l_{n2} & l_{n3} & \dots & 1
+\end{array}
+\right)
+
+\left(
+\begin{array}{cccc}
+y_1 \newline
+y_2 \newline
+y_3 \newline
+\vdots \newline
+y_{n} 
+\end{array}
+\right)
+=
+\left(
+\begin{array}{cccc}
+b_{p[1]} \newline
+b_{p[2]} \newline
+b_{p[3]} \newline
+\vdots \newline
+b_{p[n]} 
+\end{array}
+\right)
+\end{align}</script><p>​    Note that the column vector $(b_{p[i]})_n$ is equal to $Pb$, which can be easily deducted by the property of the permutation matrix.</p>
+<p>​    Solve the system from top to bottom, and we have the solution:</p>
+<script type="math/tex; mode=display">
+y_i = b_{p[i]}-\sum^{i-1}_{j=1}l_{ij}y_j</script><p>​    Then, <strong>back substitution</strong> can be applied to solve $x$ from $y$. The whole system looks like this:</p>
+<script type="math/tex; mode=display">
+\begin{align}
+\left(
+\begin{array}{cccc}
+u_{11} & u_{12} & u_{13} & \dots & u_{1n} \newline
+       & u_{22} & u_{23} & \dots & u_{2n} \newline
+       &        & u_{33} & \dots & u_{3n}\newline
+       &        &        & \ddots & \vdots \newline
+       &        &        &        & u_{nn}
+\end{array}
+\right)
+
+\left(
+\begin{array}{cccc}
+x_1 \newline
+x_2 \newline
+x_3 \newline
+\vdots \newline
+x_{n} 
+\end{array}
+\right)
+=
+\left(
+\begin{array}{cccc}
+y_{1} \newline
+y_{2} \newline
+y_{3} \newline
+\vdots \newline
+y_{n} 
+\end{array}
+\right)
+\end{align}</script><p>​    Solving it from bottom to top, we get:</p>
+<script type="math/tex; mode=display">
+x_i = (y_i-\sum_{j=i+1}^{n}u_{ij}x_j)/u_{ii}</script><p>​    The following code gives an example of forward and back substitution. Finally, we can use the functions mentioned above to find the solution in $O(n^3)$ running time.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">FBSubstitution</span><span class="params">(L,U,p,b)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    solve the system: LUx = Pb</span></span><br><span class="line"><span class="string">    L is a unit lower-triangular matrix,</span></span><br><span class="line"><span class="string">    U is upper-triangular,</span></span><br><span class="line"><span class="string">    and P is a permutation matrix</span></span><br><span class="line"><span class="string">    Here, P is represented by a vector p</span></span><br><span class="line"><span class="string">    p[i]=j =&gt; the i-th row of P contains a 1 in column j</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    n = len(L)</span><br><span class="line">    y = [] </span><br><span class="line"></span><br><span class="line">    <span class="comment">#forward substitution</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(n):</span><br><span class="line">        yy = b[p[i]]</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(i):</span><br><span class="line">            yy -= L[i][j]*y[j]</span><br><span class="line">        y.append(yy)</span><br><span class="line"></span><br><span class="line">    <span class="comment">#back substitution</span></span><br><span class="line">    x = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(n):</span><br><span class="line">        x.append(<span class="number">0</span>)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(n<span class="number">-1</span>,<span class="number">-1</span>,<span class="number">-1</span>):</span><br><span class="line">        x[i] = y[i]</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(i+<span class="number">1</span>,n):</span><br><span class="line">            x[i] -= U[i][j]*x[j]</span><br><span class="line">        x[i] /= U[i][i]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> x</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">solveLESystem</span><span class="params">(A,b)</span>:</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        L,U,p = LUPDecomposition(A)</span><br><span class="line">    <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">        <span class="keyword">return</span> []</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        x = FBSubstitution(L,U,p,b)</span><br><span class="line">        <span class="keyword">return</span> x</span><br></pre></td></tr></table></figure>
+<p><strong>E.G.</strong> Solve the system of linear equations:</p>
+<div align="center"><img src="/2020/09/18/Matrix-Operations/eg.png"></div>
+
+<p>​    The answer given by our program is <code>[-1.4, 2.2, 0.5999999999999998]​</code>, not exactly the true solution <code>[-1.4, 2.2, 0.6]</code>. Although the LUP algorithm can reduce numerical instability to some extent, the method is unable to eliminate it totally.</p>
+<p>​    Of course, we can “cover up the blemish” by rounding the numbers. But we shouldn’t ignore the existence of the instability!</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">solveLESystem_round</span><span class="params">(A,b)</span>:</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        L,U,p = LUPDecomposition(A)</span><br><span class="line">    <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">        <span class="keyword">return</span> []</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        x = FBSubstitution(L,U,p,b)</span><br><span class="line">        <span class="keyword">return</span> list(map(<span class="keyword">lambda</span> i: round(i,<span class="number">5</span>),x))</span><br></pre></td></tr></table></figure>
+<h2 id="Inverting-Matrices"><a href="#Inverting-Matrices" class="headerlink" title="Inverting Matrices"></a>Inverting Matrices</h2><p>​    Solving the inverse of a nonsingular square matrix is quite simple and intuitive after we make a discussion on the topic of solving a equation system. As the definition goes, if $AX=I_n$, then $X$ is the inverse of $A$, noted as $A^{-1}$. Conceivably, we only have to solve the following matrix equations:</p>
+<script type="math/tex; mode=display">
+AX_i = e_i,i=1,2,\dots,n</script><p>where $Xi$ is the $i$th column of the inverse $X=A^{-1}$, and $e_i$ is the <em>i</em>th column of the identity matrix $I_n$. </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">matrixInvert</span><span class="params">(A)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    Using LUP decomposition to solve the inverse of A</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    n = len(A)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        L,U,p = LUPDecomposition(A)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">        <span class="keyword">return</span> []</span><br><span class="line"></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        I = []</span><br><span class="line">        X = []</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(n):</span><br><span class="line">            I.append(<span class="number">0</span>)</span><br><span class="line">            X.append([])</span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> range(n):</span><br><span class="line">                X[i].append(<span class="number">0</span>)</span><br><span class="line">		</span><br><span class="line">        <span class="comment"># solve each column</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(n):</span><br><span class="line">            I[i] = <span class="number">1</span></span><br><span class="line">            xi = FBSubstitution(L,U,p,I)</span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> range(n):</span><br><span class="line">                X[j][i] = xi[j]</span><br><span class="line">            I[i] = <span class="number">0</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> X</span><br></pre></td></tr></table></figure>
+<p><strong>E.G.</strong> Solve the inverse of the following matrix.</p>
+<script type="math/tex; mode=display">
+A = 
+\left(
+\begin{array}{cccc}
+        1 & 2 & 3 & 4 \newline
+        2 & 3 & 1 & 2 \newline
+        1 & 1 & 1 & -1 \newline
+        2 & 1 & -1 & -7
+\end{array}
+\right)</script><p>​    The answer given by the program is</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">    [<span class="number">22.0</span>, <span class="number">-6.0</span>, <span class="number">-43.0</span>, <span class="number">17.0</span>], </span><br><span class="line"> 	[<span class="number">-17.0</span>, <span class="number">5.0</span>, <span class="number">33.0</span>, <span class="number">-13.0</span>], </span><br><span class="line"> 	[<span class="number">-1.0</span>, <span class="number">0.0</span>, <span class="number">3.0</span>, <span class="number">-1.0</span>], </span><br><span class="line"> 	[<span class="number">4.0</span>, <span class="number">-1.0</span>, <span class="number">-8.0</span>, <span class="number">3.0</span>]</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<h2 id="Least-squares-Approximation"><a href="#Least-squares-Approximation" class="headerlink" title="Least-squares Approximation"></a>Least-squares Approximation</h2><h3 id="Introduction-Curve-Fitting"><a href="#Introduction-Curve-Fitting" class="headerlink" title="Introduction: Curve Fitting"></a>Introduction: Curve Fitting</h3><p>​    Suppose we have a series of points $[(x_1,y_1),\dots,(x_m,y_m)]$ on a plane, and we want to determine a function $y=F(x)$ such that <strong>fits these points</strong>.</p>
+<p>​    What does $F(x)$ look like? To simplify the question, we make an assumption that $F(x)$ is a linearly weighted sum</p>
+<script type="math/tex; mode=display">
+F(x) = \sum^{m}_{i=1}c_{i}f_{i}(x)</script><p>where the basis functions $f_i$ are predetermined by us based on our prior knowledge at hand. For example, it’s usually the case that we set $f_i(x)=x^{i-1}$, and $F(x)$ is a polynomial with degree $n-1$. </p>
+<p>​    If $n=m$ and all the basis functions are <strong>linearly independent</strong> (which should be included in the definition of “basis”, actually), we can solve equation (23) and get the exact coefficients. </p>
+<script type="math/tex; mode=display">
+Ac=
+\left(
+\begin{array}{cccc}
+        f_1(x_1) & f_2(x_1) & \dots & f_n(x_1) \newline
+        f_1(x_2) & f_2(x_2) & \dots & f_n(x_2) \newline
+        \vdots & \vdots & \ddots & \vdots \newline
+        f_1(x_m) & f_2(x_m) & \dots & f_n(x_m)
+\end{array}
+\right)
+\left(
+\begin{array}{cccc}
+c_1 \newline
+c_2 \newline
+\vdots \newline
+c_n
+\end{array}
+\right)
+= 
+\left(
+\begin{array}{cccc}
+y_1 \newline
+y_2 \newline
+\vdots \newline
+y_m
+\end{array}
+\right)
+=y</script><p>However, the function $F(x)$ tend to overfit these $m$ points (some of them may be noise rather than reliable data), and has a weak performance when making prediction. Accordingly, it’s usually better to choose $n$ far smaller than $m$.</p>
+<p>​    If $n&lt;m$, we cannot always get the exact vector $c$ that satisfying equation (23). So, we change our purpose. We now want to choose the coefficient vector $c$ so that the <strong>approximation errors</strong> $\eta$ is small. The adjective “small” here refers to the <strong>norm</strong> of $\eta$, that is,</p>
+<script type="math/tex; mode=display">
+\begin{align}
+\eta &= Ac-y
+\\
+||\eta|| &= (\sum^{m}_{i=1}\eta_i^2)^{\frac{1}{2}}
+\end{align}</script><p>​    To simplify it, since</p>
+<script type="math/tex; mode=display">
+||\eta||^2 = ||Ac-y||^2 = \sum^{m}_{i=1}(\sum^{n}_{j=1}a_{ij}c_{j}-y_{i})^2</script><p>we merely need to choose $c$ to minimize $||\eta||^2$. Next, let’s see how to do the optimization.</p>
+<h3 id="Method-1-Differential"><a href="#Method-1-Differential" class="headerlink" title="Method 1. Differential"></a>Method 1. Differential</h3><p>​    Intuitively, we differentiating $||\eta||^2$ partially and set it to 0:</p>
+<script type="math/tex; mode=display">
+\frac{d||\eta||^2}{d c_k} = \sum^{m}_{i=1}\left[
+2a_{ik}(\sum^{n}_{j=1}a_{ij}c_{j}-y_{i})
+\right]
+=0  \quad
+k=1,\dots,n</script><p>​    Equation (27) is equivalent to (28) and (29):</p>
+<script type="math/tex; mode=display">
+\begin{align}
+(Ac-y)^{T}A&=0 \\
+
+A^{T}(Ac-y)&=0
+\end{align}</script><p>​    And thus, </p>
+<script type="math/tex; mode=display">
+A^{T}Ac=A^{T}y</script><h3 id="Method-2-Euclidean-Space-and-Orthogonality"><a href="#Method-2-Euclidean-Space-and-Orthogonality" class="headerlink" title="Method 2. Euclidean Space and Orthogonality"></a>Method 2. Euclidean Space and Orthogonality</h3><p>​    Let $V_1 = span(\alpha_1,\dots,\alpha_n)$, where $\alpha_i$ is the <em>i</em>th column vector of matrix $A$. The minimum $\eta$ is the <strong>distance</strong> from vector $y$ to the vector space $V_1$. So, $\eta$ is orthogonal to $V1$, and we have</p>
+<script type="math/tex; mode=display">
+A^{T}\eta=A^{T}(Ac-y)=0</script><p>which is equal to (30).</p>
+<h3 id="Solve-the-Normal-Equation"><a href="#Solve-the-Normal-Equation" class="headerlink" title="Solve the Normal Equation"></a>Solve the Normal Equation</h3><p>​    We call equation (30) <strong>normal equation</strong>, and the solution $c$ is called the <strong>least square solution</strong> of $Ac=y$. To solve it, just use LUP decomposition.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">matMul</span><span class="params">(A,B)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    multiply two matrices</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    m=len(A)</span><br><span class="line">    nn=len(A[<span class="number">0</span>])</span><br><span class="line">    n=len(B)</span><br><span class="line">    p=len(B[<span class="number">0</span>])</span><br><span class="line">    <span class="keyword">assert</span> nn==n</span><br><span class="line">    ans=[]</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(m):</span><br><span class="line">        ans.append([])</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(p):</span><br><span class="line">            ans[i].append(<span class="number">0</span>)</span><br><span class="line">            <span class="keyword">for</span> k <span class="keyword">in</span> range(n):</span><br><span class="line">                ans[i][j] += A[i][k]*B[k][j]</span><br><span class="line">    <span class="keyword">return</span> ans</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">transpose</span><span class="params">(A)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    get the transpose of A</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    m=len(A)</span><br><span class="line">    n=len(A[<span class="number">0</span>])</span><br><span class="line">    ans=[]</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(n):</span><br><span class="line">        ans.append([])</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(m):</span><br><span class="line">            ans[i].append(A[j][i])</span><br><span class="line">    <span class="keyword">return</span> ans</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">leastSquareSolution</span><span class="params">(A,y)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    solve the least-square solution</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    yy=[]</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> y:</span><br><span class="line">        yy.append([i])</span><br><span class="line">    AtA = matMul(transpose(A),A)</span><br><span class="line">    Aty = matMul(transpose(A),yy)</span><br><span class="line">    y=[]</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> Aty:</span><br><span class="line">        y.append(i[<span class="number">0</span>])</span><br><span class="line">    x = solveLESystem(AtA,y)</span><br><span class="line">    <span class="keyword">return</span> x</span><br></pre></td></tr></table></figure>
+<p><strong>E.G.</strong> Solve the least-square solution</p>
+<script type="math/tex; mode=display">
+\left(
+\begin{array}{cccc}
+        0.39 & -1.89 \newline
+        0.61 & -1.80 \newline
+        0.93 & -1.68 \newline
+        1.35 & -1.50
+\end{array}
+\right)
+\left(
+\begin{array}{cccc}
+x \newline
+y
+\end{array}
+\right)
+=
+\left(
+\begin{array}{cccc}
+1 \newline
+1 \newline
+1 \newline
+1
+\end{array}
+\right)</script><p>​    The answer given by the program is <code>[0.19722002578292613, -0.48807896084749747]</code>.</p>
+<h3 id="Least-square-Solution-and-Pseudoinverse"><a href="#Least-square-Solution-and-Pseudoinverse" class="headerlink" title="Least-square Solution and Pseudoinverse"></a>Least-square Solution and Pseudoinverse</h3><p>​    From equation (30), we can get $c$ directly from</p>
+<script type="math/tex; mode=display">
+c = ((A^{T}A)^{-1}A^{T})y = A^{+}y</script><p>​    $A^{+}=(A^{T}A)^{-1}A^{T}$ is exactly the pseudoinverse of matrix $A$. It can be proved both by singular value decomposition and by Penrose equation system.</p>
+<h2 id="Ref"><a href="#Ref" class="headerlink" title="Ref:"></a>Ref:</h2><ul>
+<li><em>Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest,Clifford Stein. Introduction to Algorithms.  The MIT Press, 3rd edition.</em></li>
+</ul>
+<h2 id="吐槽"><a href="#吐槽" class="headerlink" title="吐槽"></a>吐槽</h2><ul>
+<li>hexo自带的 hexo-renderer-marked 引擎对矩阵的渲染相当迷惑。在服务器端，<code>\left( \begin{matrix}...\end{matrix} \right)</code>的形式会渲染失败，将matrix换成array也不行。但改成<code>\begin{pmatrix}...\end{pmatrix}</code>就可以了？？？类似的问题还出现在行内公式里面。该引擎似乎会将下划线<code>_</code>转换为表示“斜体”的<code>&lt;em&gt;</code>标签，想尽各种方法都无法避免。</li>
+<li>如果我无法适应它，就让它适应我吧哈哈哈哈哈哈。直接删掉这个渲染引擎，安装 hexo-renderer-kramded 引擎，所有问题便解决了。引擎安装、配置过程参考了这个链接：<a href="https://blog.csdn.net/yexiaohhjk/article/details/82526604" target="_blank" rel="noopener">https://blog.csdn.net/yexiaohhjk/article/details/82526604</a></li>
+</ul>
+
       
 
       
@@ -837,16 +551,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/02/03/Number-Theoretic-Algorithms/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://allen-yolk.github.io/2020/09/18/Matrix-Operations/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2020/09/11/Computational-Geometry/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Computational Geometry</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -861,93 +634,32 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-2019学年春季学期选课实况" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/02/02/2019%E5%AD%A6%E5%B9%B4%E6%98%A5%E5%AD%A3%E5%AD%A6%E6%9C%9F%E9%80%89%E8%AF%BE%E5%AE%9E%E5%86%B5/">2019学年春季学期选课实况</a>
-    </h1>
-  
-
-        
-        <a href="/2020/02/02/2019%E5%AD%A6%E5%B9%B4%E6%98%A5%E5%AD%A3%E5%AD%A6%E6%9C%9F%E9%80%89%E8%AF%BE%E5%AE%9E%E5%86%B5/" class="archive-article-date">
-  	<time datetime="2020-02-02T14:18:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>​    突然想做一个选课过程纪实。发挥聪明才智（误），通过潦草的数据分析，制定没什么用的选课策略吧！</p>
-        
-          <a class="article-more-a" href="/2020/02/02/2019%E5%AD%A6%E5%B9%B4%E6%98%A5%E5%AD%A3%E5%AD%A6%E6%9C%9F%E9%80%89%E8%AF%BE%E5%AE%9E%E5%86%B5/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">日常</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/02/02/2019%E5%AD%A6%E5%B9%B4%E6%98%A5%E5%AD%A3%E5%AD%A6%E6%9C%9F%E9%80%89%E8%AF%BE%E5%AE%9E%E5%86%B5/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Solving-Systems-of-Linear-Equations"><span class="toc-number">1.</span> <span class="toc-text">Solving Systems of Linear Equations</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Method-1-Compute-the-inverse"><span class="toc-number">1.1.</span> <span class="toc-text">Method 1. Compute the inverse</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Method-2-LUP-Decomposition"><span class="toc-number">1.2.</span> <span class="toc-text">Method 2. LUP Decomposition</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-Computing-an-LU-Decomposition"><span class="toc-number">1.2.1.</span> <span class="toc-text">1) Computing an LU Decomposition</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-Computing-the-LUP-Decomposition"><span class="toc-number">1.2.2.</span> <span class="toc-text">2) Computing the LUP Decomposition</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-Solve-the-System-of-Equations-Back-and-Forward-Substitution"><span class="toc-number">1.2.3.</span> <span class="toc-text">3) Solve the System of Equations: Back and Forward Substitution</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Inverting-Matrices"><span class="toc-number">2.</span> <span class="toc-text">Inverting Matrices</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Least-squares-Approximation"><span class="toc-number">3.</span> <span class="toc-text">Least-squares Approximation</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Introduction-Curve-Fitting"><span class="toc-number">3.1.</span> <span class="toc-text">Introduction: Curve Fitting</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Method-1-Differential"><span class="toc-number">3.2.</span> <span class="toc-text">Method 1. Differential</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Method-2-Euclidean-Space-and-Orthogonality"><span class="toc-number">3.3.</span> <span class="toc-text">Method 2. Euclidean Space and Orthogonality</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Solve-the-Normal-Equation"><span class="toc-number">3.4.</span> <span class="toc-text">Solve the Normal Equation</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Least-square-Solution-and-Pseudoinverse"><span class="toc-number">3.5.</span> <span class="toc-text">Least-square Solution and Pseudoinverse</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ref"><span class="toc-number">4.</span> <span class="toc-text">Ref:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#吐槽"><span class="toc-number">5.</span> <span class="toc-text">吐槽</span></a></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
+  
+  
+  
 
   
+
   
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">Next &amp;raquo;</a>
-    </nav>
+
   
 
 
@@ -974,8 +686,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: true,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

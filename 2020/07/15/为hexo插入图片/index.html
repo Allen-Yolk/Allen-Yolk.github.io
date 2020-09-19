@@ -198,33 +198,25 @@
         <p>​        自从这个小博客诞生以来，图片插入的问题始终没有解决。之前我一直用各种方法和“话术”避免需要插入图片的情况，但最近渐渐意识到了图片在文档中的重要地位。</p>
 <p>​        于是，实验开始！</p>
 <a id="more"></a>
-
 <h2 id="本地图片插入"><a href="#本地图片插入" class="headerlink" title="本地图片插入"></a>本地图片插入</h2><p>​        Hexo图片插入方法分为两种：本地插入和网络引用。这里介绍本地插入的方法。</p>
 <h3 id="1-配置文件的修改"><a href="#1-配置文件的修改" class="headerlink" title="1. 配置文件的修改"></a>1. 配置文件的修改</h3><p>​        打开 <strong>hexo安装目录下的_config.xml</strong> 文件，用 ctrl+f 找到 <code>post_asset_folder</code>属性，将其值修改为 <code>true</code>。</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">post_asset_folder: true</span><br></pre></td></tr></table></figure>
-
 <p>​        <code>post_asset_folder</code> 设定为真后，资源文件管理功能开启。此后，每次使用命令<code>hexo new &lt;title&gt;</code> 创建新的博客文章时，在文章的统一目录下会同时生成一个同名文件夹。将所需的图片等资源放入此文件夹中，便可以在文章中引用。</p>
 <h3 id="2-插件的安装"><a href="#2-插件的安装" class="headerlink" title="2. 插件的安装"></a>2. 插件的安装</h3><p>​        在 hexo 安装目录下执行命令：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install https:&#x2F;&#x2F;github.com&#x2F;CodeFalling&#x2F;hexo-asset-image --save</span><br></pre></td></tr></table></figure>
-
 <p>​        以安装图片显示插件 (version: 0.0.5)。注意，在 windows 或 linux 环境下可能会报出警告：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.11 (node_modules\nunjucks\node_modules\fsevents):</span><br><span class="line">npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.11: wanted &#123;&quot;os&quot;:&quot;darwin&quot;,&quot;arch&quot;:&quot;any&quot;&#125; (current: &#123;&quot;os&quot;:&quot;win32&quot;,&quot;arch&quot;:&quot;x64&quot;&#125;)</span><br></pre></td></tr></table></figure>
-
 <p>​        在 mac 下，需要 fsevents，但在 windows 和 linux 下是不需要的。因此，直接无视这一 warning。</p>
 <p>​        注意，不要使用以下命令：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-asset-image --save</span><br></pre></td></tr></table></figure>
-
 <p>​         这一命令安装的插件版本为1.0.0，实测不能在博客里正常显示图片。</p>
 <h3 id="3-插入图片"><a href="#3-插入图片" class="headerlink" title="3. 插入图片"></a>3. 插入图片</h3><p>​        先将需要插入的图片放在同名文件夹中，再按照 markdown 语法来插入图片即可。</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">Alt text</span>](<span class="link">path</span>)</span><br></pre></td></tr></table></figure>
-
 <p>​        注意，这里的路径格式为：<code>同名文件夹/文件</code>。例如，</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">popTeamEpic</span>](<span class="link">为hexo插入图片/example.jpg</span>)</span><br></pre></td></tr></table></figure>
-
 <p>​        效果如下：<img src="/2020/07/15/%E4%B8%BAhexo%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/example.jpg" alt="popTeamEpic"></p>
 <h2 id="设置图片大小"><a href="#设置图片大小" class="headerlink" title="设置图片大小"></a>设置图片大小</h2><p>​        hexo里插入的图片会按照自身大小铺满，故需要q嵌入 html 的 img 标签来实现缩放、居中。</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">align</span>=<span class="string">center</span>&gt;</span></span><span class="xml"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"为hexo插入图片/example.jpg"</span> <span class="attr">width</span>=<span class="string">"50%"</span> <span class="attr">height</span>=<span class="string">"50%"</span> <span class="attr">align</span>=<span class="string">center</span> &gt;</span></span><span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
-
 <p>​        效果如下：</p>
 <div align="center"><img src="/2020/07/15/%E4%B8%BAhexo%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/example.jpg" width="50%" height="50%" align="center"></div>
 

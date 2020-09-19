@@ -195,47 +195,48 @@
         <p>Key words: 类与对象，复制构造函数</p>
 <p>From: 程设</p>
 <a id="more"></a>
-
 <h2 id="奇怪的类复制"><a href="#奇怪的类复制" class="headerlink" title="奇怪的类复制"></a>奇怪的类复制</h2><h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>​        程序填空，使其分三行输出：9 22 5</p>
 <p>​        题干程序如下：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Sample</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="keyword">int</span> v;</span><br><span class="line"><span class="comment">// 请在此处补充你的代码</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">PrintAndDouble</span><span class="params">(Sample o)</span></span>&#123;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; o.v;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="function">Sample <span class="title">a</span><span class="params">(<span class="number">5</span>)</span></span>;</span><br><span class="line">	Sample b = a;</span><br><span class="line">	PrintAndDouble(b);</span><br><span class="line">	Sample c = <span class="number">20</span>;</span><br><span class="line">	PrintAndDouble(c);</span><br><span class="line">	Sample d;</span><br><span class="line">	d = a;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; d.v;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p>​        <strong>输入：</strong> 无</p>
 <p>​        <strong>输出：</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">9</span><br><span class="line">22</span><br><span class="line">5</span><br></pre></td></tr></table></figure>
-
 <h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>​        “刚从上学期计概过来的，这就是程设吗，i了i了。”</p>
 <p>​        与计概有所不同，程设在前期大量涉及C++面向对象的复杂语法，因此学习方法、题目风格都会又很大的改变。这一类填空题看着挺意义不明，但其实对熟悉C++机制还是大有裨益的。</p>
 <p>​        观察各个变量的数值变化，总结出以下表格：</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="center">对象</th>
-<th align="center">直观初值</th>
-<th align="center">输出值</th>
+<th style="text-align:center">对象</th>
+<th style="text-align:center">直观初值</th>
+<th style="text-align:center">输出值</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">a</td>
-<td align="center">5</td>
-<td align="center">/</td>
+<tbody>
+<tr>
+<td style="text-align:center">a</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">/</td>
 </tr>
 <tr>
-<td align="center">b</td>
-<td align="center">5</td>
-<td align="center">9</td>
+<td style="text-align:center">b</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">9</td>
 </tr>
 <tr>
-<td align="center">c</td>
-<td align="center">20</td>
-<td align="center">22</td>
+<td style="text-align:center">c</td>
+<td style="text-align:center">20</td>
+<td style="text-align:center">22</td>
 </tr>
 <tr>
-<td align="center">d</td>
-<td align="center">5</td>
-<td align="center">5</td>
+<td style="text-align:center">d</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">5</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <p>​        题目提示我们，这道题的玄机在于复制构造函数。为此，需要调查每个变量的整个生命周期。</p>
 <ul>
 <li>a：用含整型参数的构造函数创建，随后没有对a的变动。</li>
@@ -245,7 +246,6 @@
 </ul>
 <p>​        这样一来就可以看出，我们需要在复制构造函数中完成+2操作。同时，还要写一个类型转换构造函数（带默认参数值），以满足各个对象的初始化形式。</p>
 <h3 id="解答"><a href="#解答" class="headerlink" title="解答"></a>解答</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Sample</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="keyword">int</span> v;</span><br><span class="line">    <span class="comment">//填入代码</span></span><br><span class="line">	Sample(<span class="keyword">int</span> i=<span class="number">0</span>)&#123;            <span class="comment">//类型转换构造函数，带默认值，实现无参构造</span></span><br><span class="line">		v = i;</span><br><span class="line">	&#125;;</span><br><span class="line">	Sample(<span class="keyword">const</span> Sample &amp;a)&#123;   <span class="comment">//复制构造函数</span></span><br><span class="line">		v = a.v+<span class="number">2</span>; </span><br><span class="line">	&#125;;</span><br><span class="line">    <span class="comment">//以上是填入的代码</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">PrintAndDouble</span><span class="params">(Sample o)</span></span>&#123;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; o.v;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="function">Sample <span class="title">a</span><span class="params">(<span class="number">5</span>)</span></span>;</span><br><span class="line">	Sample b = a;</span><br><span class="line">	PrintAndDouble(b);</span><br><span class="line">	Sample c = <span class="number">20</span>;</span><br><span class="line">	PrintAndDouble(c);</span><br><span class="line">	Sample d;</span><br><span class="line">	d = a;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; d.v;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ul>
 <li>复制构造函数的参数为：<code>A&amp; a</code> 或者 <code>const A&amp; a</code> 。如果<strong>函数内不改变参数值的话，后一种写法兼容前一种写法</strong>。比如这题，用普通引用会compile error，因为编译器认为<code>Sample c = 20</code>有可能以20转换出的临时对象（视作常量）作为参数调用复制构造函数（当然，实际上是不会调用复制构造函数的。编译器过于谨慎x）。</li>
 <li>复制构造函数调用时机：<ol>
